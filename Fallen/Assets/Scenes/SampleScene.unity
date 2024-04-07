@@ -830,12 +830,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 20
   jumpForce: 45
+  jumpBufferFrames: 8
+  coyoteTime: 0.1
+  maxAirJumps: 1
   groundCheckPoint: {fileID: 337662094}
   groundCheckY: 0.2
   groundCheckX: 0.5
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
+  dashSpeed: 70
+  dashTime: 0.2
+  dashCooldown: 0.35
+  dashEffect: {fileID: 3680729278309904, guid: 7d7135568de65be4bb905ca2203d7dae, type: 3}
 --- !u!95 &2082510897
 Animator:
   serializedVersion: 7
