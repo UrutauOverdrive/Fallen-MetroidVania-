@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header ("Horizontal Movement Settings:")]
+    [Header("Horizontal Movement Settings:")]
     [SerializeField] private float walkSpeed = 1f;
     [Space(5)]
 
-    [Header ("Vertical Movement Settings:")]
+    [Header("Vertical Movement Settings:")]
     [SerializeField] private float jumpForce = 45f;
     private int jumpBufferCounter = 0;
     [SerializeField] private int jumpBufferFrames;
@@ -72,9 +72,9 @@ public class PlayerController : MonoBehaviour
         UpdateJumpVariables();
 
         if (pState.dashing) return;
-        Flip();
         Move();
         Jump();
+        Flip();
         StartDash();
     }
 
@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     {
         if (xAxis < 0)
         {
-            transform.localScale = new Vector2 (-1, transform.localScale.y);
+            transform.localScale = new Vector2(-1, transform.localScale.y);
         }
         else if (xAxis > 0)
         {
@@ -97,8 +97,8 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        rb.velocity = new Vector2 (walkSpeed * xAxis, rb.velocity.y);
-        anim.SetBool("Walking", rb.velocity.x != 0 && Grounded());
+        rb.velocity = new Vector2(walkSpeed * xAxis, rb.velocity.y);
+        anim.SetBool("Runing", rb.velocity.x != 0 && Grounded());
     }
 
     void StartDash()
@@ -150,10 +150,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
 
-            pState.jumping = false;
+            pState.jumping = true;
         }
 
-        if(!pState.jumping)
+        if (!pState.jumping)
         {
             if (jumpBufferCounter > 0 && coyoteTimeCounter > 0)
             {
@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour
 
                 pState.jumping = true;
             }
-            else if(!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
+            else if (!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
             {
                 pState.jumping = true;
 
@@ -189,7 +189,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jumpBufferCounter = jumpBufferFrames;
-        } 
+        }
         else
         {
             jumpBufferCounter--;
