@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         rb.velocity = new Vector2(walkSpeed * xAxis, rb.velocity.y);
-        anim.SetBool("Runing", rb.velocity.x != 0 && Grounded());
+        anim.SetBool("Walking", rb.velocity.x != 0 && Grounded());
     }
 
     void StartDash()
@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
 
-            pState.jumping = true;
+            pState.jumping = false;
         }
 
         if (!pState.jumping)
