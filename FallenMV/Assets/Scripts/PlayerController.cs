@@ -28,17 +28,16 @@ public class PlayerController : MonoBehaviour
     [Header("Dash Settings:")]
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
-    [SerializeField] private float dashCooldown;
-    [SerializeField] GameObject dashEffect;
-    [Space(5)]
+     [Space(5)]
 
     PlayerStateList pState;
     private Rigidbody2D rb;
     private float xAxis;
     private float gravity;
     Animator anim;
-    private bool canDash;
+    private bool canDash = true;
     private bool dashed;
+    
 
     public static PlayerController Instance;
 
@@ -53,6 +52,10 @@ public class PlayerController : MonoBehaviour
             Instance = this;
         }
     }
+
+    
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -122,7 +125,6 @@ public class PlayerController : MonoBehaviour
         anim.SetTrigger("Dashing");
         rb.gravityScale = 0;
         rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0);
-        if (Grounded()) Instantiate(dashEffect, transform);
         yield return new WaitForSeconds(dashTime);
         rb.gravityScale = gravity;
         pState.dashing = false;
