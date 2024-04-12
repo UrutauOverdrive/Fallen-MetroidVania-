@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
     private float xAxis;
     private float gravity;
     Animator anim;
-    private bool canDash;
+    private bool canDash = true;
     private bool dashed;
 
     public static PlayerController Instance;
