@@ -152,7 +152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -402.73, y: -170.2}
+  m_AnchoredPosition: {x: -404.73, y: -137.11}
   m_SizeDelta: {x: 12, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9368108
@@ -242,8 +242,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d3c7672d2d111458800556ba69eb43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heartsParent: {fileID: 0}
-  heartContainerPrefab: {fileID: 0}
+  heartsParent: {fileID: 9368107}
+  heartContainerPrefab: {fileID: 2629371982270129799, guid: b4352cd68cf9b534dbb7497536638074, type: 3}
 --- !u!114 &339705931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,7 +983,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.527
+  m_FillAmount: 0.778
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1164,7 +1164,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -10.09, y: -344.99}
+  m_AnchoredPosition: {x: -12.57, y: -278.14}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059915307
@@ -1397,19 +1397,33 @@ MonoBehaviour:
   dashSpeed: 70
   dashTime: 0.2
   dashCooldown: 0.35
-  dashEffect: {fileID: 3680729278309904, guid: 7d7135568de65be4bb905ca2203d7dae, type: 3}
-  hitFlashSpeed: 0
-  bloodSpurt: {fileID: 0}
-  timeToHeal: 0
   manaStorage: {fileID: 1624120821}
-  mana: 0
-  manaDrainSpeed: 0
-  manaGain: 0
-  spellDamage: 0
-  downSpellForce: 0
-  sideSpellFireball: {fileID: 0}
-  upSpellExplosion: {fileID: 0}
-  downSpellFireball: {fileID: 0}
+  mana: 1
+  manaDrainSpeed: 0.2
+  manaGain: 0.01
+  SideAttackTransform: {fileID: 2082510895}
+  SideAttackArea: {x: 0, y: 0}
+  attackableLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  damage: 10
+  manaSpellCost: 0.3
+  timeBetweenCast: 0.5
+  spellDamage: 10000
+  downSpellForce: 2
+  sideSpellFireball: {fileID: 6704207778926196201, guid: 947f6bf225f5a704988270b22f6859ba, type: 3}
+  upSpellExplosion: {fileID: 6385907138284827304, guid: 2e596e9390ec48949af4b1c3f30ada6c, type: 3}
+  downSpellFireball: {fileID: 1213753353}
+  recoilXSteps: 5
+  recoilYSteps: 5
+  recoilXSpeed: 100
+  recoilYSpeed: 100
+  health: 100
+  maxHealth: 100
+  hitFlashSpeed: 0
+  bloodSpurt: {fileID: 5286861553776355784, guid: 83ed765bc7803cd4b94324dbd348b00d, type: 3}
+  timeToHeal: 0
+  pState: {fileID: 0}
 --- !u!95 &2082510897
 Animator:
   serializedVersion: 7
@@ -1448,6 +1462,10 @@ MonoBehaviour:
   dashing: 0
   healing: 0
   casting: 0
+  recoilingX: 0
+  recoilingY: 0
+  lookingRigth: 0
+  invincible: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
