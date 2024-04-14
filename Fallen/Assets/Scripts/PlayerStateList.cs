@@ -8,4 +8,7 @@ public class PlayerStateList : MonoBehaviour
     public bool dashing = false;
     public bool healing;
     public bool casting;
+    public bool recoilingX, recoilingY;
+    public bool lookingRigth;
+    public bool invincible;
 }
