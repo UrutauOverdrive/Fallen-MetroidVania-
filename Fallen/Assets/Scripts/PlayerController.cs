@@ -42,10 +42,11 @@ public class PlayerController : MonoBehaviour
     [Space(5)]
 
     [Header("Attack Settings")]
-    [SerializeField] Transform SideAttackTransform;
-    [SerializeField] Vector2 SideAttackArea;
+    [SerializeField] Transform SideAttackTransform, UpAttackTransform, DownAttackTransform;
+    [SerializeField] Vector2 SideAttackArea, UpAttackArea, DownAttackArea;
     [SerializeField] LayerMask attackableLayer;
     [SerializeField] float damage;
+    
     bool attack = false;
     float timeBetweenAttack, timeSinceAttack;
     bool restoreTime;
@@ -127,8 +128,9 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(SideAttackTransform.position, SideAttackArea);
-    }
-
+        Gizmos.DrawWireCube(UpAttackTransform.position, UpAttackArea);
+        Gizmos.DrawWireCube(DownAttackTransform.position, DownAttackArea);
+    }   
     void Update()
     {
         GetInputs();
@@ -185,7 +187,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         rb.velocity = new Vector2(walkSpeed * xAxis, rb.velocity.y);
-        anim.SetBool("Running", rb.velocity.x != 0 && Grounded());
+        anim.SetBool("Walking", rb.velocity.x != 0 && Grounded());
     }
 
     void StartDash()
@@ -227,6 +229,17 @@ public class PlayerController : MonoBehaviour
         if (yAxis == 0 || yAxis < 0 && Grounded())
         {
             Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
+            
+        }
+        else if (yAxis > 0)
+        {
+            Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
+            
+        }
+        else if (yAxis < 0 && !Grounded())
+        {
+            Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingY, recoilYSpeed);
+            
         }
     }
 
@@ -253,6 +266,12 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+    }
+    void SlashEffectAngle(GameObject _slashEffect, int _effectAngle, Transform _attackTransform)
+    {
+        _slashEffect = Instantiate(_slashEffect, _attackTransform);
+        _slashEffect.transform.eulerAngles = new Vector3 (0, 0, _effectAngle);
+        _slashEffect.transform.localScale = new Vector2 (transform.localScale.x, transform.localScale.y);
     }
 
     void Recoil()
@@ -330,15 +349,18 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float _damage)
     {
         Health -= Mathf.RoundToInt(_damage);
+        StartCoroutine (StopTakingDamage());
     }
     IEnumerator StopTakingDamage()
     {
         pState.invincible = true;
+        GameObject _bloodSpurtParticules = Instantiate(bloodSpurt, transform.position, Quaternion.identity);
+        Destroy(_bloodSpurtParticules, 1.5f);
         anim.SetTrigger("TakeDamage");
         yield return new WaitForSeconds(1f);
         pState.invincible = false;
     }
-
+    
     public int Health
     {
         get { return health; }
