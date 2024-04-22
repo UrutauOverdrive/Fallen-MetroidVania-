@@ -152,8 +152,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -311, y: 167}
-  m_SizeDelta: {x: 12, y: 1}
+  m_AnchoredPosition: {x: -8.501602, y: 149}
+  m_SizeDelta: {x: 482.9969, y: 75.8475}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &9368108
 MonoBehaviour:
@@ -338,7 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 372917555}
   m_Layer: 0
-  m_Name: DownAttackTransform (3)
+  m_Name: DownAttackTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,7 +353,7 @@ Transform:
   m_GameObject: {fileID: 372917554}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.67, z: 0}
+  m_LocalPosition: {x: 0, y: -1.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -521,7 +521,7 @@ GameObject:
   m_Component:
   - component: {fileID: 537457876}
   m_Layer: 0
-  m_Name: UpAttackTransform (2)
+  m_Name: UpAttackTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -536,7 +536,7 @@ Transform:
   m_GameObject: {fileID: 537457875}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.36, z: 0}
+  m_LocalPosition: {x: 0, y: 1.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -769,8 +769,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1213753355}
   - component: {fileID: 1213753354}
-  - component: {fileID: 1213753357}
   - component: {fileID: 1213753356}
+  - component: {fileID: 1213753357}
   m_Layer: 0
   m_Name: Down Spell Fireball
   m_TagString: Untagged
@@ -842,7 +842,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 0}
+  m_LocalScale: {x: 3.958, y: 4, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2082510895}
@@ -869,8 +869,8 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!61 &1213753357
-BoxCollider2D:
+--- !u!58 &1213753357
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -903,18 +903,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.32757014, y: 0.00015586615}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.2, y: 0.66}
-    newSize: {x: 1.2, y: 0.66}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.51803625, y: 0.5811527}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.33082247
 --- !u!1 &1429085512
 GameObject:
   m_ObjectHideFlags: 0
@@ -993,7 +983,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1607276097}
   - component: {fileID: 1607276096}
-  - component: {fileID: 1607276095}
   - component: {fileID: 1607276094}
   - component: {fileID: 1607276098}
   - component: {fileID: 1607276099}
@@ -1024,52 +1013,6 @@ MonoBehaviour:
   player: {fileID: 2082510896}
   speed: 15
   damage: 1
---- !u!61 &1607276095
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1607276093}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &1607276096
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1133,7 +1076,7 @@ Transform:
   m_GameObject: {fileID: 1607276093}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.78, y: -3.17, z: 0}
+  m_LocalPosition: {x: 2, y: -3.23, z: 0}
   m_LocalScale: {x: 1, y: 1.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1215,7 +1158,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -1266,7 +1209,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 2, y: 2}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1624120821
 MonoBehaviour:
@@ -1293,7 +1236,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.778
+  m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -1449,7 +1392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768593202}
   m_Layer: 0
-  m_Name: SideAttackTransform (1)
+  m_Name: SideAttackTransform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1464,7 +1407,7 @@ Transform:
   m_GameObject: {fileID: 1768593201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.06, y: -0.15, z: 0}
+  m_LocalPosition: {x: 1.25, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1497,7 +1440,7 @@ RectTransform:
   m_GameObject: {fileID: 2059915305}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.16, y: 1.16, z: 1.16}
+  m_LocalScale: {x: 1.21, y: 1.21, z: 1.21}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1624120820}
@@ -1505,8 +1448,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -12.57, y: -278.14}
-  m_SizeDelta: {x: 2, y: 2}
+  m_AnchoredPosition: {x: 77, y: -85}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2059915307
 MonoBehaviour:
@@ -1742,19 +1685,20 @@ MonoBehaviour:
   dashTime: 0.2
   dashCooldown: 0.35
   manaStorage: {fileID: 1624120821}
-  mana: 1
+  mana: 10
   manaDrainSpeed: 0.2
-  manaGain: 0.01
+  manaGain: 0.3
   SideAttackTransform: {fileID: 1768593202}
   UpAttackTransform: {fileID: 537457876}
   DownAttackTransform: {fileID: 372917555}
-  SideAttackArea: {x: 2, y: 1.5}
-  UpAttackArea: {x: 1.5, y: 2}
-  DownAttackArea: {x: 1.5, y: 2}
+  SideAttackArea: {x: 2.5, y: 2}
+  UpAttackArea: {x: 2, y: 2.5}
+  DownAttackArea: {x: 2, y: 2.5}
   attackableLayer:
     serializedVersion: 2
     m_Bits: 64
   damage: 10
+  slashEffect: {fileID: 8346992924083242581, guid: ec03eebd1d79fef4f83c0dfae0548a34, type: 3}
   manaSpellCost: 0.3
   timeBetweenCast: 0.5
   spellDamage: 10000
@@ -1766,11 +1710,11 @@ MonoBehaviour:
   recoilYSteps: 5
   recoilXSpeed: 100
   recoilYSpeed: 100
-  health: 10000
-  maxHealth: 10000
-  hitFlashSpeed: 0
+  health: 100
+  maxHealth: 50
   bloodSpurt: {fileID: 5286861553776355784, guid: 83ed765bc7803cd4b94324dbd348b00d, type: 3}
-  timeToHeal: 0
+  hitFlashSpeed: 10
+  timeToHeal: 1
   pState: {fileID: 0}
 --- !u!95 &2082510897
 Animator:

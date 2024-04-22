@@ -34,7 +34,7 @@ public class HeartController : MonoBehaviour
         }
     void SetHeartContainers()
     {
-        for (int i=0; i < heartContainers.Length; i++)
+        for (int i = 0; i < heartContainers.Length; i++)
         {
             if (i < PlayerController.Instance.maxHealth)
             {
@@ -48,7 +48,7 @@ public class HeartController : MonoBehaviour
     }
     void SetFilledHearts()
     {
-        for (int i=0; i < heartFills.Length; i++)
+        for (int i = 0; i < heartFills.Length; i++)
         {
             if (i < PlayerController.Instance.maxHealth)
             {
@@ -62,12 +62,12 @@ public class HeartController : MonoBehaviour
     }
     void InstantiateHeartContainers()
     {
-        for (int i=0; i < heartFills.Length; i++)
+        for (int i=0; i < PlayerController.Instance.maxHealth; i++)
         {
             GameObject temp = Instantiate(heartContainerPrefab);
             temp.transform.SetParent(heartsParent, false);
             heartContainers[i] = temp;
-            heartFills[i] = temp.transform.Find("HeartFill").GetComponent<Image>();
+            heartFills[i] = temp.transform.Find("Heart_Fill_0").GetComponent<Image>();
         }
     } 
     

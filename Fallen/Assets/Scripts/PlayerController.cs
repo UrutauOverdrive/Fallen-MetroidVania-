@@ -46,6 +46,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Vector2 SideAttackArea, UpAttackArea, DownAttackArea;
     [SerializeField] LayerMask attackableLayer;
     [SerializeField] float damage;
+    [SerializeField] GameObject slashEffect;
     
     bool attack = false;
     float timeBetweenAttack, timeSinceAttack;
@@ -75,8 +76,8 @@ public class PlayerController : MonoBehaviour
     [Header("Health Settings")]
     public int health;
     public int maxHealth;
-    [SerializeField] float hitFlashSpeed; 
     [SerializeField] GameObject bloodSpurt;
+    [SerializeField] float hitFlashSpeed;    
     public delegate void OnHealthChangedDelegate();
     [HideInInspector] public OnHealthChangedDelegate onHealthChangedCallback;
     float healTimer;
@@ -224,23 +225,24 @@ public class PlayerController : MonoBehaviour
         {
             timeSinceAttack = 0;
             anim.SetTrigger("Attack");
+            if (yAxis == 0 || yAxis < 0 && Grounded())
+            {
+                Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
+                Instantiate(slashEffect, SideAttackTransform);
+            }
+            else if (yAxis > 0)
+            {
+                Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
+                SlashEffectAngle(slashEffect, 90, UpAttackTransform);
+            }
+            else if (yAxis < 0 && !Grounded())
+            {
+                Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingY, recoilYSpeed);
+                SlashEffectAngle(slashEffect, -90, DownAttackTransform);
+            }
         }
 
-        if (yAxis == 0 || yAxis < 0 && Grounded())
-        {
-            Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
-            
-        }
-        else if (yAxis > 0)
-        {
-            Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
-            
-        }
-        else if (yAxis < 0 && !Grounded())
-        {
-            Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingY, recoilYSpeed);
-            
-        }
+       
     }
 
     public void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
