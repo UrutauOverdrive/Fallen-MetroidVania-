@@ -11,4 +11,5 @@ public class PlayerStateList : MonoBehaviour
     public bool recoilingX, recoilingY;
     public bool lookingRigth;
     public bool invincible;
+    public bool cutscene = false;
 }

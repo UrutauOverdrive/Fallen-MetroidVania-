@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float recoilFactor;
     [SerializeField] protected bool isRecoiling = false;
 
-    [SerializeField] protected PlayerController player;
     [SerializeField] protected float speed;
     [SerializeField] protected float damage;
 
@@ -18,15 +17,8 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Start()
     {
-
-    }
-
-    protected virtual void Awake()
-    {
         rb = GetComponent<Rigidbody2D>();
-        player = PlayerController.Instance;
     }
-
 
     protected virtual void Update()
     {

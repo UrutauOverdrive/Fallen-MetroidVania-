@@ -57,12 +57,13 @@ public class PlayerController : MonoBehaviour
     [Header("Spell Settings")]
     [SerializeField] float manaSpellCost = 0.3f;
     [SerializeField] float timeBetweenCast = 0.5f;
-    float timeSinceCast;
     [SerializeField] float spellDamage;
     [SerializeField] float downSpellForce;
     [SerializeField] GameObject sideSpellFireball;
     [SerializeField] GameObject upSpellExplosion;
     [SerializeField] GameObject downSpellFireball;
+    float timeSinceCast;
+    float castOrHealTimer;
     [Space(5)]
 
     [Header("Recoil")]
@@ -86,13 +87,17 @@ public class PlayerController : MonoBehaviour
 
     [HideInInspector] public PlayerStateList pState;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
+    private Animator anim;
+
     private float xAxis, yAxis;
     private float gravity;
-    Animator anim;
+    private bool canFlash = true;
+  
     private bool canDash = true;
     private bool dashed;
 
-    private SpriteRenderer sr;
+  
 
     public static PlayerController Instance;
 
@@ -106,7 +111,7 @@ public class PlayerController : MonoBehaviour
         {
             Instance = this;
         }
-        Health = maxHealth;
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -123,6 +128,9 @@ public class PlayerController : MonoBehaviour
 
          Mana = mana;
          manaStorage.fillAmount = Mana;
+
+        Health = maxHealth;
+
     }
 
     private void OnDrawGizmos()
@@ -134,6 +142,8 @@ public class PlayerController : MonoBehaviour
     }   
     void Update()
     {
+        if (pState.cutscene) return;
+
         GetInputs();
         UpdateJumpVariables();
 
@@ -151,6 +161,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (pState.cutscene) return;
+
         if (pState.dashing) return;
         Recoil();
     }
@@ -160,6 +172,15 @@ public class PlayerController : MonoBehaviour
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         attack = Input.GetButtonDown("Attack");
+
+        if (Input.GetButton("Cast/Heal"))
+        {
+            castOrHealTimer += Time.deltaTime;
+        }
+        else
+        {
+            castOrHealTimer = 0;
+        }
     }
 
     void Flip()
@@ -204,19 +225,39 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator Dash()
+    IEnumerator Dash() 
     {
         canDash = false;
         pState.dashing = true;
         anim.SetTrigger("Dashing");
         rb.gravityScale = 0;
-        rb.velocity = new Vector2(transform.localScale.x * dashSpeed, 0);
+        int _dir = pState.lookingRigth ? 1 : -1;
+        rb.velocity = new Vector2(_dir * dashSpeed, 0);
         yield return new WaitForSeconds(dashTime);
         rb.gravityScale = gravity;
         pState.dashing = false;
         yield return new WaitForSeconds(dashCooldown);
         canDash = true;
     }
+
+    public IEnumerator WalkIntoNewScene(Vector2 _exitDir, float _delay)
+    {
+        if (_exitDir.y > 0)
+        {
+            rb.velocity = jumpForce * _exitDir;
+        }
+       if(_exitDir.x != 0  )
+        {
+            xAxis = _exitDir.x > 0 ? 1 : -1;
+
+            Move();
+        }
+
+        Flip();
+        yield return new WaitForSeconds(_delay);
+        pState.cutscene = false;
+    }
+
 
     void Attack()
     {
@@ -363,6 +404,15 @@ public class PlayerController : MonoBehaviour
         pState.invincible = false;
     }
     
+     IEnumerator Flash()
+    {
+        sr.enabled = !sr.enabled;
+        canFlash = false;
+        yield return new WaitForSeconds(0.1f);
+        canFlash = true;    
+    }
+
+
     public int Health
     {
         get { return health; }
@@ -396,30 +446,29 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0)
+        if (jumpBufferCounter > 0 && coyoteTimeCounter > 0 && !pState.jumping)
+        {
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce);
+
+            pState.jumping = true;
+        }
+       
+        if (!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
+        {
+            pState.jumping = true;
+
+            airJumpCounter++;
+
+            rb.velocity = new Vector3(rb.velocity.x, jumpForce);
+        }
+       
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 3)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
 
             pState.jumping = false;
         }
 
-        if (!pState.jumping)
-        {
-            if (jumpBufferCounter > 0 && coyoteTimeCounter > 0)
-            {
-                rb.velocity = new Vector3(rb.velocity.x, jumpForce);
-
-                pState.jumping = true;
-            }
-            else if (!Grounded() && airJumpCounter < maxAirJumps && Input.GetButtonDown("Jump"))
-            {
-                pState.jumping = true;
-
-                airJumpCounter++;
-
-                rb.velocity = new Vector3(rb.velocity.x, jumpForce);
-            }
-        }
         anim.SetBool("Jumping", !Grounded());
     }
 
@@ -448,7 +497,7 @@ public class PlayerController : MonoBehaviour
 
     void Heal()
     {
-        if(Input.GetButton("Healing") && Health < maxHealth && Mana > 0 && !pState.jumping && !pState.dashing)
+        if(Input.GetButton("Cast/Heal") && castOrHealTimer > 0.05f && Health < maxHealth && Mana > 0 && !pState.jumping && !pState.dashing)
         {
             pState.healing = true;
             anim.SetBool("Healing", true);        
@@ -485,7 +534,7 @@ public class PlayerController : MonoBehaviour
 
     void CastSpell()
     {
-        if(Input.GetButtonDown("CastSpell") && timeSinceCast >= timeBetweenCast && Mana >= manaSpellCost)
+        if(Input.GetButtonUp("Cast/Heal") && castOrHealTimer <= 0.05f && timeSinceCast >= timeBetweenCast && Mana >= manaSpellCost)
         {
             pState.casting = true;
             timeSinceCast = 0;
@@ -546,9 +595,17 @@ public class PlayerController : MonoBehaviour
 
     void FlashWhileInvincible()
     {
-        sr.material.color = pState.invincible ? 
-            Color.Lerp(Color.white, Color.black, Mathf.PingPong(Time.time * hitFlashSpeed, 1.0f)) : 
-            Color.white;
+        if (pState.invincible)
+        {
+            if (Time.timeScale > 0.02 && canFlash)
+            {
+                StartCoroutine(Flash());
+            }
+        }
+        else
+        {
+            sr.enabled = true;
+        }
     }
 
 

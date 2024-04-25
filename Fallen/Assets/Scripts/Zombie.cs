@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Zombie : Enemy
-{
+{ 
     protected override void Start()
     {
-        rb.gravityScale = 12f;
-    }
-
-    protected override void Awake()
-    {
-        base.Awake();
+        base.Start();
+        rb.gravityScale = 12f;  
     }
 
     protected override void Update()
