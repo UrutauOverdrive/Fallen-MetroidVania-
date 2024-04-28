@@ -5,19 +5,13 @@ using UnityEngine.UI;
 
 public class HeartController : MonoBehaviour
 {
-    PlayerController player;
-
     private GameObject[] heartContainers;
     private Image[] heartFills;
     public Transform heartsParent;
     public GameObject heartContainerPrefab;
-
-
-     // Start is called before the first frame update
+    // Start is called before the first frame update
     void Start()
     {
-       
-        player = PlayerController.Instance;
         heartContainers = new GameObject[PlayerController.Instance.maxHealth];
         heartFills = new Image[PlayerController.Instance.maxHealth];
 
@@ -25,13 +19,12 @@ public class HeartController : MonoBehaviour
         InstantiateHeartContainers();
         UpdateHeartsHUD();
     }
-     
 
     // Update is called once per frame
     void Update()
-        {
+    {
 
-        }
+    }
     void SetHeartContainers()
     {
         for (int i = 0; i < heartContainers.Length; i++)
@@ -50,7 +43,7 @@ public class HeartController : MonoBehaviour
     {
         for (int i = 0; i < heartFills.Length; i++)
         {
-            if (i < PlayerController.Instance.maxHealth)
+            if (i < PlayerController.Instance.Health)
             {
                 heartFills[i].fillAmount = 1;
             }
@@ -62,18 +55,17 @@ public class HeartController : MonoBehaviour
     }
     void InstantiateHeartContainers()
     {
-        for (int i=0; i < PlayerController.Instance.maxHealth; i++)
+        for (int i = 0; i < PlayerController.Instance.maxHealth; i++)
         {
             GameObject temp = Instantiate(heartContainerPrefab);
             temp.transform.SetParent(heartsParent, false);
             heartContainers[i] = temp;
-            heartFills[i] = temp.transform.Find("Heart_Fill_0").GetComponent<Image>();
+            heartFills[i] = temp.transform.Find("HeartFill").GetComponent<Image>();
         }
-    } 
-    
-     void UpdateHeartsHUD()
-     {
+    }
+    void UpdateHeartsHUD()
+    {
         SetHeartContainers();
         SetFilledHearts();
-     }  
+    }
 }

@@ -10,10 +10,19 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected bool isRecoiling = false;
 
     [SerializeField] protected float speed;
+    
     [SerializeField] protected float damage;
 
     protected float recoilTimer;
     protected Rigidbody2D rb;
+
+    public enum EnemyStates
+    {
+        //Crawler
+        Crawler_Idle,
+        Crawler_Flip
+    }
+    protected EnemyStates currentEnemyState;
 
     protected virtual void Start()
     {
@@ -22,6 +31,8 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
+        UpdateEnemyStats();
+
         if (health <= 0)
         {
             Destroy(gameObject);
@@ -46,19 +57,29 @@ public class Enemy : MonoBehaviour
     {
         health -= _damageDone;
 
-        if (isRecoiling)
+        if (!isRecoiling)
         {
             rb.AddForce(-_hitForce * recoilFactor * _hitDirection);
         }
     }
 
-    protected void OnCollisionStay2D(Collision2D other)
+    protected void OnCollisionStay2D(Collision2D _other)
     {
-        if (!other.gameObject.CompareTag("Player") && !PlayerController.Instance.pState.invincible)
+        if (_other.gameObject.CompareTag("Player") && !PlayerController.Instance.pState.invincible)
         {
             Attack();
             PlayerController.Instance.HitStopTime(0, 5, 0.5f);
         }
+    }
+
+    protected virtual void UpdateEnemyStats()
+    {
+
+    }
+
+    protected void ChangeState(EnemyStates _newState)
+    {
+        currentEnemyState = _newState;
     }
 
     protected virtual void Attack()

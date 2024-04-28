@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 9647525}
   - component: {fileID: 9647527}
   - component: {fileID: 9647526}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_4 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 16077091}
   - component: {fileID: 16077093}
   - component: {fileID: 16077092}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_4 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 82732614}
   - component: {fileID: 82732616}
   - component: {fileID: 82732615}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_18 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1130,7 +1130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107260168}
   - component: {fileID: 107260169}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1217,7 +1217,7 @@ GameObject:
   - component: {fileID: 111418606}
   - component: {fileID: 111418608}
   - component: {fileID: 111418607}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_4 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1522,7 +1522,7 @@ GameObject:
   - component: {fileID: 157149491}
   - component: {fileID: 157149493}
   - component: {fileID: 157149492}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1655,7 +1655,7 @@ GameObject:
   - component: {fileID: 161972107}
   - component: {fileID: 161972109}
   - component: {fileID: 161972108}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1873,7 +1873,7 @@ GameObject:
   m_Component:
   - component: {fileID: 192353667}
   - component: {fileID: 192353668}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1960,7 +1960,7 @@ GameObject:
   - component: {fileID: 192361703}
   - component: {fileID: 192361705}
   - component: {fileID: 192361704}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_17 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2178,7 +2178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 196757508}
   - component: {fileID: 196757509}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2437,7 +2437,7 @@ GameObject:
   - component: {fileID: 213092773}
   - component: {fileID: 213092775}
   - component: {fileID: 213092774}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_8 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2569,7 +2569,7 @@ GameObject:
   m_Component:
   - component: {fileID: 230471250}
   - component: {fileID: 230471251}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2656,7 +2656,7 @@ GameObject:
   - component: {fileID: 240784469}
   - component: {fileID: 240784471}
   - component: {fileID: 240784470}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2808,7 +2808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4580312307527603424, guid: 3cda8f17c87ddab4a891ba8e198427ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.45
+      value: 2.281
       objectReference: {fileID: 0}
     - target: {fileID: 4580312307527603424, guid: 3cda8f17c87ddab4a891ba8e198427ea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2874,7 +2874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 260727883}
   - component: {fileID: 260727882}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3131,7 +3131,7 @@ GameObject:
   - component: {fileID: 298808766}
   - component: {fileID: 298808767}
   - component: {fileID: 298808768}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3263,7 +3263,7 @@ GameObject:
   m_Component:
   - component: {fileID: 300605810}
   - component: {fileID: 300605811}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3399,7 +3399,7 @@ GameObject:
   - component: {fileID: 315628814}
   - component: {fileID: 315628816}
   - component: {fileID: 315628815}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_17 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3703,7 +3703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 394661934}
   - component: {fileID: 394661935}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3875,7 +3875,7 @@ GameObject:
   m_Component:
   - component: {fileID: 421352020}
   - component: {fileID: 421352021}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4218,7 +4218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 515130003}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Midground_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4327,7 +4327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4580312307527603424, guid: 3cda8f17c87ddab4a891ba8e198427ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.45
+      value: 2.258
       objectReference: {fileID: 0}
     - target: {fileID: 4580312307527603424, guid: 3cda8f17c87ddab4a891ba8e198427ea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4566,7 +4566,7 @@ GameObject:
   - component: {fileID: 583945314}
   - component: {fileID: 583945315}
   - component: {fileID: 583945316}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4698,7 +4698,7 @@ GameObject:
   m_Component:
   - component: {fileID: 592411067}
   - component: {fileID: 592411068}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4871,7 +4871,7 @@ GameObject:
   - component: {fileID: 614919563}
   - component: {fileID: 614919565}
   - component: {fileID: 614919564}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_18 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5003,7 +5003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 630619993}
   - component: {fileID: 630619994}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - RockCombinations1_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5089,7 +5089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 637709256}
   - component: {fileID: 637709257}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5434,7 +5434,7 @@ GameObject:
   - component: {fileID: 764547602}
   - component: {fileID: 764547604}
   - component: {fileID: 764547603}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_17 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5739,7 +5739,7 @@ GameObject:
   - component: {fileID: 856259412}
   - component: {fileID: 856259414}
   - component: {fileID: 856259413}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5872,7 +5872,7 @@ GameObject:
   - component: {fileID: 864946565}
   - component: {fileID: 864946567}
   - component: {fileID: 864946566}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_8 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6349,7 +6349,7 @@ GameObject:
   - component: {fileID: 906802279}
   - component: {fileID: 906802281}
   - component: {fileID: 906802280}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_18 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6568,7 +6568,7 @@ GameObject:
   - component: {fileID: 939931503}
   - component: {fileID: 939931505}
   - component: {fileID: 939931504}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_17 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6787,7 +6787,7 @@ GameObject:
   - component: {fileID: 960035858}
   - component: {fileID: 960035860}
   - component: {fileID: 960035859}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6920,7 +6920,7 @@ GameObject:
   - component: {fileID: 961674836}
   - component: {fileID: 961674838}
   - component: {fileID: 961674837}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_18 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7072,7 +7072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4580312307527603424, guid: 3cda8f17c87ddab4a891ba8e198427ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.45
+      value: 2.188
       objectReference: {fileID: 0}
     - target: {fileID: 4580312307527603424, guid: 3cda8f17c87ddab4a891ba8e198427ea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7257,7 +7257,7 @@ GameObject:
   - component: {fileID: 1001896711}
   - component: {fileID: 1001896713}
   - component: {fileID: 1001896712}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7509,7 +7509,7 @@ GameObject:
   - component: {fileID: 1088168462}
   - component: {fileID: 1088168464}
   - component: {fileID: 1088168463}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7642,7 +7642,7 @@ GameObject:
   - component: {fileID: 1093158847}
   - component: {fileID: 1093158849}
   - component: {fileID: 1093158848}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7774,7 +7774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1108127062}
   - component: {fileID: 1108127063}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave Light (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7979,7 +7979,7 @@ GameObject:
   - component: {fileID: 1163578622}
   - component: {fileID: 1163578624}
   - component: {fileID: 1163578623}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8340,7 +8340,7 @@ GameObject:
   - component: {fileID: 1220329471}
   - component: {fileID: 1220329473}
   - component: {fileID: 1220329472}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8506,7 +8506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1233262915}
   - component: {fileID: 1233262916}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8593,7 +8593,7 @@ GameObject:
   - component: {fileID: 1233834317}
   - component: {fileID: 1233834319}
   - component: {fileID: 1233834318}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8811,7 +8811,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339832783}
   - component: {fileID: 1339832784}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8897,7 +8897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1353918539}
   - component: {fileID: 1353918540}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8983,7 +8983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1369539074}
   - component: {fileID: 1369539075}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9103,7 +9103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1381281472}
   - component: {fileID: 1381281473}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9190,7 +9190,7 @@ GameObject:
   - component: {fileID: 1404227470}
   - component: {fileID: 1404227472}
   - component: {fileID: 1404227471}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_8 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9527,7 +9527,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1432851819}
   - component: {fileID: 1432851820}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - RockCombinations1_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9614,7 +9614,7 @@ GameObject:
   - component: {fileID: 1484640955}
   - component: {fileID: 1484640957}
   - component: {fileID: 1484640956}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9747,7 +9747,7 @@ GameObject:
   - component: {fileID: 1520746917}
   - component: {fileID: 1520746919}
   - component: {fileID: 1520746918}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9879,7 +9879,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527284289}
   - component: {fileID: 1527284290}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9963,6 +9963,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3306055316484095911, guid: 8879d2ce3570c8647bd7d2efb0d8b7ff, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306055316484095911, guid: 8879d2ce3570c8647bd7d2efb0d8b7ff, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5922208948769701224, guid: 8879d2ce3570c8647bd7d2efb0d8b7ff, type: 3}
       propertyPath: m_Name
       value: 'Canvas '
@@ -10053,7 +10061,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8415394351403636004, guid: 8879d2ce3570c8647bd7d2efb0d8b7ff, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1199591077}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5922208948769701224, guid: 8879d2ce3570c8647bd7d2efb0d8b7ff, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1540588635}
   m_SourcePrefab: {fileID: 100100000, guid: 8879d2ce3570c8647bd7d2efb0d8b7ff, type: 3}
 --- !u!114 &1540588632 stripped
 MonoBehaviour:
@@ -10071,6 +10082,24 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8415394351403636004, guid: 8879d2ce3570c8647bd7d2efb0d8b7ff, type: 3}
   m_PrefabInstance: {fileID: 1540588631}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1540588634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5922208948769701224, guid: 8879d2ce3570c8647bd7d2efb0d8b7ff, type: 3}
+  m_PrefabInstance: {fileID: 1540588631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1540588635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540588634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af03173dc0f6c341b7d19c3ef0826bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneFader: {fileID: 1199591078}
 --- !u!1001 &1544181245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10167,7 +10196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1550107128}
   - component: {fileID: 1550107129}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - RockCombinations1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10512,7 +10541,7 @@ GameObject:
   - component: {fileID: 1594869549}
   - component: {fileID: 1594869551}
   - component: {fileID: 1594869550}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10644,7 +10673,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1639672738}
   - component: {fileID: 1639672739}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10883,7 +10912,7 @@ GameObject:
   - component: {fileID: 1647167465}
   - component: {fileID: 1647167467}
   - component: {fileID: 1647167466}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_8 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11015,7 +11044,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1670140927}
   - component: {fileID: 1670140928}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11218,7 +11247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1724025557}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Midground_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11368,7 +11397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716455845764657021, guid: dccda5724e0019149bf16dfed389ddc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.91
+      value: 15.22
       objectReference: {fileID: 0}
     - target: {fileID: 3716455845764657021, guid: dccda5724e0019149bf16dfed389ddc2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11427,7 +11456,7 @@ GameObject:
   - component: {fileID: 1775313071}
   - component: {fileID: 1775313073}
   - component: {fileID: 1775313072}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12011,7 +12040,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716455845764657021, guid: dccda5724e0019149bf16dfed389ddc2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.87
+      value: 8.634
       objectReference: {fileID: 0}
     - target: {fileID: 3716455845764657021, guid: dccda5724e0019149bf16dfed389ddc2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12069,7 +12098,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1839769388}
   - component: {fileID: 1839769389}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12327,7 +12356,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1891124716}
   - component: {fileID: 1891124717}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12500,7 +12529,7 @@ GameObject:
   - component: {fileID: 1905989027}
   - component: {fileID: 1905989028}
   - component: {fileID: 1905989029}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12630,6 +12659,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2079108612648527747, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079108612648527747, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2079108612648527747, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1387268553
+      objectReference: {fileID: 0}
     - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
       propertyPath: health
       value: 5
@@ -12639,6 +12680,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: timeToHeal
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
       propertyPath: manaStorage
       value: 
       objectReference: {fileID: 1540588632}
@@ -12646,9 +12691,41 @@ PrefabInstance:
       propertyPath: slashEffect
       value: 
       objectReference: {fileID: 8346992924083242581, guid: ec03eebd1d79fef4f83c0dfae0548a34, type: 3}
+    - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: hitFlashSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: UpAttackArea.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: UpAttackArea.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: DownAttackArea.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: DownAttackArea.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: SideAttackArea.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: SideAttackArea.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4302614523919537933, guid: ce44cb82c5695404c91455015afa3840, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5787667243080089594, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.88
       objectReference: {fileID: 0}
     - target: {fileID: 6313748898367706538, guid: ce44cb82c5695404c91455015afa3840, type: 3}
       propertyPath: m_SortingLayer
@@ -12673,6 +12750,18 @@ PrefabInstance:
     - target: {fileID: 6790272441476846505, guid: ce44cb82c5695404c91455015afa3840, type: 3}
       propertyPath: m_Offset.y
       value: -0.13867652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6913603788556564047, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 8216516184631694408, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467973940980118538, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: 8987004192939303232, guid: ce44cb82c5695404c91455015afa3840, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12902,7 +12991,7 @@ GameObject:
   - component: {fileID: 1928871427}
   - component: {fileID: 1928871429}
   - component: {fileID: 1928871428}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13038,9 +13127,10 @@ GameObject:
   - component: {fileID: 2006367186}
   - component: {fileID: 2006367191}
   - component: {fileID: 2006367190}
-  m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Untagged
+  - component: {fileID: 2006367192}
+  m_Layer: 6
+  m_Name: Crawler
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13106,17 +13196,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.06775966, y: 0.049739003}
+  m_Offset: {x: -0.025294304, y: -0.061925888}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.5, y: 3.66}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.33595645, y: 0.67681134}
+  m_Size: {x: 7.4452953, y: 5.962286}
   m_EdgeRadius: 0
 --- !u!212 &2006367188
 SpriteRenderer:
@@ -13158,12 +13248,12 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_SortingLayerID: 1387268553
+  m_SortingLayer: 2
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 4093529123795720158, guid: a4d19413f7d977541807f712154cd6df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -13181,8 +13271,8 @@ Transform:
   m_GameObject: {fileID: 2006367184}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0070983, y: -2.7788, z: 0}
-  m_LocalScale: {x: 0.5561, y: 1.6556, z: 1}
+  m_LocalPosition: {x: 6.06, y: 1.59, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -13221,17 +13311,17 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: -0.037220955, y: -0.049218178}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.5, y: 3.66}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 7.4021244, y: 5.9132595}
   m_EdgeRadius: 0
 --- !u!114 &2006367191
 MonoBehaviour:
@@ -13242,15 +13332,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 2006367184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 742cf84bc4c99fb4cb41a449b29e65a8, type: 3}
+  m_Script: {fileID: 11500000, guid: a9d2bcd681304014fbb0ae6af78e130b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 15
-  recoilLength: 1
-  recoilFactor: 10
+  health: 3
+  recoilLength: 0
+  recoilFactor: 0
   isRecoiling: 0
-  speed: 10
-  damage: 0
+  speed: 3
+  damage: 1
+  flipWaitTime: 1
+  ledgeCheckX: 1.2
+  ledgeCheckY: 1
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!95 &2006367192
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2006367184}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4f0086c377cb534b9e3a46e2a965837, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2011044210
 GameObject:
   m_ObjectHideFlags: 0
@@ -13486,7 +13604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2053820150}
   - component: {fileID: 2053820151}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13572,7 +13690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2083059317}
   - component: {fileID: 2083059318}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Floor_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13659,7 +13777,7 @@ GameObject:
   - component: {fileID: 2084946816}
   - component: {fileID: 2084946818}
   - component: {fileID: 2084946817}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cave - Platforms_11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14018,11 +14136,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3079241186961907591, guid: 5a097f18e4227c14e8279a0dffa7c9b7, type: 3}
       propertyPath: m_Size.x
-      value: 5.8347893
+      value: 5.92078
       objectReference: {fileID: 0}
     - target: {fileID: 3079241186961907591, guid: 5a097f18e4227c14e8279a0dffa7c9b7, type: 3}
       propertyPath: m_Offset.x
-      value: -0.40537453
+      value: -0.36237907
       objectReference: {fileID: 0}
     - target: {fileID: 3079241186961907591, guid: 5a097f18e4227c14e8279a0dffa7c9b7, type: 3}
       propertyPath: m_Offset.y

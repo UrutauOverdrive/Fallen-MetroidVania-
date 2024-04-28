@@ -16,21 +16,14 @@ public class SceneFader : MonoBehaviour
         Out
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         fadeOutUIImage = GetComponent<Image>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public IEnumerator Fade(FadeDirection _fadeDirection)
     {
-        float _alpha = _fadeDirection == FadeDirection.Out ?  1: 0;
+        float _alpha = _fadeDirection == FadeDirection.Out ? 1 : 0;
         float _fadeEndValue = _fadeDirection == FadeDirection.Out ? 0 : 1;
 
         if (_fadeDirection == FadeDirection.Out)

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    public SceneFader sceneFader;
+
     public static UIManager Instance;
 
     private void Awake()
@@ -17,12 +19,7 @@ public class UIManager : MonoBehaviour
             Instance = this;
         }
         DontDestroyOnLoad(gameObject);
-    }
 
-    public SceneFader sceneFader;
-
-    private void Start()
-    {
         sceneFader = GetComponentInChildren<SceneFader>();
     }
 }
