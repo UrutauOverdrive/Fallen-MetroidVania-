@@ -113,13 +113,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject sideSpellFireball;
     [SerializeField] GameObject upSpellExplosion;
     [SerializeField] GameObject downSpellFireball;
-    float castOrHealTimer;
+    float castTimer;
     [Space(5)]
 
 
     [HideInInspector] public PlayerStateList pState;
     private Animator anim;
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private SpriteRenderer sr;
 
     //Input Variables
@@ -195,7 +195,7 @@ public class PlayerController : MonoBehaviour
     {
         if (_other.GetComponent<Enemy>() != null && pState.casting)
         {
-            _other.GetComponent<Enemy>().EnemyHit(spellDamage, (_other.transform.position - transform.position).normalized, -recoilYSpeed);
+            _other.GetComponent<Enemy>().EnemyGetsHit(spellDamage, (_other.transform.position - transform.position).normalized, -recoilYSpeed);
         }
     }
 
@@ -211,13 +211,22 @@ public class PlayerController : MonoBehaviour
         yAxis = Input.GetAxisRaw("Vertical");
         attack = Input.GetButtonDown("Attack");
 
-        if (Input.GetButton("Cast/Heal"))
+        if (Input.GetButton("Cast"))
         {
-            castOrHealTimer += Time.deltaTime;
+            castTimer += Time.deltaTime;
         }
         else
         {
-            castOrHealTimer = 0;
+            castTimer = 0;
+        }
+
+        if (Input.GetButton("Heal"))
+        {
+            healTimer += Time.deltaTime;
+        }
+        else
+        {
+            healTimer = 0;
         }
     }
 
@@ -304,39 +313,39 @@ public class PlayerController : MonoBehaviour
 
             if (yAxis == 0 || yAxis < 0 && Grounded())
             {
-                Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, recoilXSpeed);
+                int _recoilLeftOrRight = pState.lookingRight ? 1 : -1;
+                Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, Vector2.right * _recoilLeftOrRight,recoilXSpeed);
                 
             }
             else if (yAxis > 0)
             {
-                Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, recoilYSpeed);
+                Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, Vector2.up,recoilYSpeed);
                 
             }
             else if (yAxis < 0 && !Grounded())
             {
-                Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingY, recoilYSpeed);
+                Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingY, Vector2.down, recoilYSpeed);
                 
             }
         }
 
 
     }
-    void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilDir, float _recoilStrength)
+    void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilBool, Vector2 _recoilDir, float _recoilStrength)
     {
         Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
-        List<Enemy> hitEnemies = new List<Enemy>();
+        
 
         if (objectsToHit.Length > 0)
         {
-            _recoilDir = true;
+            _recoilBool = true;
         }
         for (int i = 0; i < objectsToHit.Length; i++)
         {
-            Enemy e = objectsToHit[i].GetComponent<Enemy>();
-            if (e && !hitEnemies.Contains(e))
+           
+            if (objectsToHit[i].GetComponent<Enemy>() !=null)
             {
-                e.EnemyHit(damage, (transform.position - objectsToHit[i].transform.position).normalized, _recoilStrength);
-                hitEnemies.Add(e);
+                objectsToHit[i].GetComponent<Enemy>().EnemyGetsHit (damage, _recoilDir, _recoilStrength);
 
                 if (objectsToHit[i].CompareTag("Enemy"))
                 {
@@ -344,12 +353,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-    }
-    void SlashEffectAtAngle(GameObject _slashEffect, int _effectAngle, Transform _attackTransform)
-    {
-        _slashEffect = Instantiate(_slashEffect, _attackTransform);
-        _slashEffect.transform.eulerAngles = new Vector3(0, 0, _effectAngle);
-        _slashEffect.transform.localScale = new Vector2(transform.localScale.x, transform.localScale.y);
     }
     void Recoil()
     {
@@ -503,7 +506,7 @@ public class PlayerController : MonoBehaviour
     }
     void Heal()
     {
-        if (Input.GetButton("Cast/Heal") && castOrHealTimer > 0.05f && Health < maxHealth && Mana > 0 && Grounded() && !pState.dashing)
+        if (Input.GetButton("Heal") && healTimer > 0.05f && Health < maxHealth && Mana > 0 && Grounded() && !pState.dashing)
         {
             pState.healing = true;
             anim.SetBool("Healing", true);
@@ -542,7 +545,7 @@ public class PlayerController : MonoBehaviour
 
     void CastSpell()
     {
-        if (Input.GetButtonUp("Cast/Heal") && castOrHealTimer <= 0.05f && timeSinceCast >= timeBetweenCast && Mana >= manaSpellCost)
+        if (Input.GetButtonUp("Cast") && castTimer <= 0.05f && timeSinceCast >= timeBetweenCast && Mana >= manaSpellCost)
         {
             pState.casting = true;
             timeSinceCast = 0;

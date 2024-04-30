@@ -21,9 +21,12 @@ public class Crawler : Enemy
 
     protected override void UpdateEnemyStats()
     {
-       
+       if (health <= 0)
+        {
+           Death(0.05f);
+        }
 
-        switch (currentEnemyState)
+        switch (GetCurrentEnemyState)
         {
             case EnemyStates.Crawler_Idle:
                 Vector3 _ledgeCheckStart = transform.localScale.x > 0 ? new Vector3(ledgeCheckX, 0) : new Vector3(-ledgeCheckX, 0); 

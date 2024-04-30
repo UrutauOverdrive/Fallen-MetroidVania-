@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public SceneFader sceneFader;
+    public SceneController sceneController;
 
     public static UIManager Instance;
 
@@ -20,6 +20,6 @@ public class UIManager : MonoBehaviour
         }
         DontDestroyOnLoad(gameObject);
 
-        sceneFader = GetComponentInChildren<SceneFader>();
+        sceneController = GetComponentInChildren<SceneController>();
     }
 }
