@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float mana;
     [SerializeField] float manaDrainSpeed;
     [SerializeField] float manaGain;
+    public bool halfMana;
     [Space(5)]
 
     [Header("Spell Settings")]
@@ -125,6 +126,7 @@ public class PlayerController : MonoBehaviour
     //Input Variables
     private float xAxis, yAxis;
     private bool attack = false;
+    bool openMap;
 
     private bool canFlash = true;
 
@@ -156,6 +158,8 @@ public class PlayerController : MonoBehaviour
 
         anim = GetComponent<Animator>();
 
+
+        SaveData.Instance.LoadPlayerData();
         gravity = rb.gravityScale;
 
         Health = maxHealth;
@@ -176,21 +180,30 @@ public class PlayerController : MonoBehaviour
     {
         if (pState.cutscene) return;
 
-        GetInputs();
-        UpdateJumpVariables();
+        if (pState.alive)
+        {
+            GetInputs();
+            ToggleMap();
+        }
 
-        if (pState.dashing) return;
-        RestoreTimeScale();
+        UpdateJumpVariables();
+        RestoreTimeScale(); 
+
+        if (pState.dashing || pState.healing) return;
+        if (pState.alive)
+        {
+            Move();
+            Heal();
+            CastSpell();
+            Flip();
+            Jump();
+            StartDash();
+            Attack();
+        }
+       
         FlashWhileInvincible();
-        Move();
-        Heal();
-        CastSpell();
-        if (pState.healing) return;
-        Flip();
-        Jump();
-        StartDash();
-        Attack();
     }
+
     private void OnTriggerEnter2D(Collider2D _other) //for up and down cast spell
     {
         if (_other.GetComponent<Enemy>() != null && pState.casting)
@@ -210,6 +223,7 @@ public class PlayerController : MonoBehaviour
         xAxis = Input.GetAxisRaw("Horizontal");
         yAxis = Input.GetAxisRaw("Vertical");
         attack = Input.GetButtonDown("Attack");
+        openMap = Input.GetButton("Map");
 
         if (Input.GetButton("Cast"))
         {
@@ -227,6 +241,18 @@ public class PlayerController : MonoBehaviour
         else
         {
             healTimer = 0;
+        }
+    }
+
+    void ToggleMap()
+    {
+        if (openMap)
+        {
+            UIManager.Instance.mapHandler.SetActive(true);
+        }
+        else
+        {
+            UIManager.Instance.mapHandler.SetActive(false);
         }
     }
 
@@ -421,8 +447,19 @@ public class PlayerController : MonoBehaviour
     }
     public void TakeDamage(float _damage)
     {
-        Health -= Mathf.RoundToInt(_damage);
-        StartCoroutine(StopTakingDamage());
+       if (pState.alive)
+        {
+            Health -= Mathf.RoundToInt(_damage);
+            if (Health <= 0)
+            {
+                Health = 0;
+                StartCoroutine(Death());
+            }
+            else
+            {
+                StartCoroutine(StopTakingDamage());
+            }    
+        }
     }
     IEnumerator StopTakingDamage()
     {
@@ -483,6 +520,40 @@ public class PlayerController : MonoBehaviour
         }
         Time.timeScale = _newTimeScale;
     }
+
+    IEnumerator Death()
+    {
+        pState.alive = false;
+        Time.timeScale = 1f;
+        GameObject _bloodSpurtParticles = Instantiate(bloodSpurt, transform.position, Quaternion.identity);
+        Destroy(_bloodSpurtParticles, 1.5f);
+        anim.SetTrigger("Death");
+
+        yield return new WaitForSeconds(0.9f);
+        StartCoroutine(UIManager.Instance.ActivateDeathScreen());
+
+        yield return new WaitForSeconds(0.9f);
+        Instantiate(GameManager.Instance.shade, transform.position, Quaternion.identity);
+    }
+    public void Respawned()
+    {
+        if (!pState.alive)
+        {
+            pState.alive = true;
+            halfMana = true;
+            UIManager.Instance.SwitchMana(UIManager.ManaState.HalfMana);
+            Mana = 0;
+            Health = maxHealth;
+            anim.Play("Player_Idle");
+        }
+    }
+
+    public void RestoreMana()
+    {
+        halfMana = false;
+        UIManager.Instance.SwitchMana(UIManager.ManaState.FullMana);      
+    }
+
     IEnumerator StartTimeAgain(float _delay)
     {
         restoreTime = true;
@@ -529,7 +600,7 @@ public class PlayerController : MonoBehaviour
             healTimer = 0;
         }
     }
-    float Mana
+    public float Mana
     {
         get { return mana; }
         set
@@ -537,7 +608,14 @@ public class PlayerController : MonoBehaviour
             //if mana stats change
             if (mana != value)
             {
-                mana = Mathf.Clamp(value, 0, 1);
+                if (!halfMana)
+                {
+                    mana = Mathf.Clamp(value, 0, 1);
+                }
+                else
+                {
+                    mana = Mathf.Clamp(value, 0, 0.5f);
+                }
                 manaStorage.fillAmount = Mana;
             }
         }
