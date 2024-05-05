@@ -9,6 +9,7 @@ public class MapManager : MonoBehaviour
 
     Bench bench;
 
+    [System.Obsolete]
     private void OnEnable()
     {
         bench = FindObjectOfType<Bench>();

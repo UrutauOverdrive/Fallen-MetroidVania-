@@ -96,7 +96,7 @@ public struct SaveData
         }
     }
 
-    public void LoadPlayerData()
+    /*public void LoadPlayerData()
     {
         if (File.Exists(Application.persistentDataPath + "/save.bench.data"))
         {
@@ -124,7 +124,7 @@ public struct SaveData
             PlayerController.Instance.Health = PlayerController.Instance.maxHealth;
             PlayerController.Instance.Mana = 0.5f;
         }
-    }
+    }*/
 
     public void SaveShadeData()
     {

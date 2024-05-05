@@ -159,7 +159,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
 
 
-        SaveData.Instance.LoadPlayerData();
+      
         gravity = rb.gravityScale;
 
         Health = maxHealth;
@@ -533,7 +533,7 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(UIManager.Instance.ActivateDeathScreen());
 
         yield return new WaitForSeconds(0.9f);
-        Instantiate(GameManager.Instance.shade, transform.position, Quaternion.identity);
+        
     }
     public void Respawned()
     {
