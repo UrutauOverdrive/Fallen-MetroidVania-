@@ -461,7 +461,7 @@ public class PlayerController : MonoBehaviour
             }    
         }
     }
-    IEnumerator StopTakingDamage()
+    public IEnumerator StopTakingDamage()
     {
         pState.invincible = true;
         GameObject _bloodSpurtParticles = Instantiate(bloodSpurt, transform.position, Quaternion.identity);
