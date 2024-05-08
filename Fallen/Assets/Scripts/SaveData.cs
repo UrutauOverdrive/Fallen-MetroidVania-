@@ -19,8 +19,7 @@ public struct SaveData
 
     //player stuff
     public int playerHealth;
-    public float playerMana;
-    public bool playerHalfMana;
+    public float playerStamina;
     public Vector2 playerPosition;
     public string lastScene;
 
@@ -81,10 +80,8 @@ public struct SaveData
         {
             playerHealth = PlayerController.Instance.Health;
             writer.Write(playerHealth);
-            playerMana = PlayerController.Instance.Mana;
-            writer.Write(playerMana);
-            playerHalfMana = PlayerController.Instance.halfMana;
-            writer.Write(playerHalfMana);
+            playerStamina = PlayerController.Instance.Stamina;
+            writer.Write(playerStamina);
 
 
             playerPosition = PlayerController.Instance.transform.position;
@@ -114,7 +111,7 @@ public struct SaveData
                 PlayerController.Instance.transform.position = playerPosition;
                 PlayerController.Instance.halfMana = playerHalfMana;
                 PlayerController.Instance.Health = playerHealth;
-                PlayerController.Instance.Mana = playerMana;
+                PlayerController.Instance.Stamina = playerMana;
             }
         }
         else
@@ -122,7 +119,7 @@ public struct SaveData
             Debug.Log("File doesn't exist");
             PlayerController.Instance.halfMana = false;
             PlayerController.Instance.Health = PlayerController.Instance.maxHealth;
-            PlayerController.Instance.Mana = 0.5f;
+            PlayerController.Instance.Stamina = 0.5f;
         }
     }*/
 

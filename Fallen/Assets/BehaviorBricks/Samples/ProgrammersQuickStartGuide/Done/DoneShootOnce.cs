@@ -53,7 +53,7 @@ namespace BBSamples.PQSG // Programmers Quick Start Guide
 
 
         /// <summary>Update method of DoneShootOnce.</summary>
-        /// <remarks>Instantiate the bullet prefab, Search the RigitBody component in bullet instance. We add a rigitBody to bullet 
+        /// <remarks>Instantiate the bullet prefab, Search the RigitBody component in bullet Instance. We add a rigitBody to bullet 
         /// if doesn´t exist, and then we give it a velocity.</remarks>
         /// <returns>Return FAILED if the shootPoint is null, and COMPLETE otherwise.</returns>
         // Main class method, invoked by the execution engine.

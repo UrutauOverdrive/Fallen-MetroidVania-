@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public SceneController sceneController;
+    public SceneController sceneController; 
 
     public static UIManager Instance;
 

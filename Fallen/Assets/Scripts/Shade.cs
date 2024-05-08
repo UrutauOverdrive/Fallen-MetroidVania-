@@ -103,7 +103,7 @@ public class Shade : Enemy
 
         if (GetCurrentEnemyState == EnemyStates.Shade_Death)
         {
-            PlayerController.Instance.RestoreMana();
+            
             SaveData.Instance.SavePlayerData();
             anim.SetTrigger("Death");
             Destroy(gameObject);

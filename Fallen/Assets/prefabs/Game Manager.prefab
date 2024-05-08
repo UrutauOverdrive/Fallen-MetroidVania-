@@ -111,7 +111,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3073385999440744200}
-  - component: {fileID: 5998024573120758550}
   - component: {fileID: 875785923180381135}
   m_Layer: 0
   m_Name: Game Manager
@@ -136,19 +135,6 @@ Transform:
   - {fileID: 4481193376477750160}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5998024573120758550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 785145160821300216}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c77cd3cfa566db246a53c9f1c60429d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transitionedFromScene: 
 --- !u!114 &875785923180381135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,10 +144,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 785145160821300216}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0581236dccd7a104fadc465a305aee5f, type: 3}
+  m_Script: {fileID: 11500000, guid: b1806327972d3e748b78b041c5f145fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnim: {fileID: 1513230843159894045}
 --- !u!1 &3013563880714877982
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

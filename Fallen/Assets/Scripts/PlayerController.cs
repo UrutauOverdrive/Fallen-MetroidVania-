@@ -4,6 +4,8 @@ using System.Net.Sockets;
 using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -94,18 +96,20 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float timeToHeal;
     [Space(5)]
 
-    [Header("Mana Settings")]
-    [SerializeField] UnityEngine.UI.Image manaStorage;
+    [Header("Stamina Settings")]
+    [SerializeField] public Image StaminaBar;
+    [SerializeField] public float Stamina;
+    [SerializeField] public float MaxStamina;
+    [SerializeField] public float attackCost;
+    [SerializeField] public float dashCost;
+    [SerializeField] public float chargeRate;
 
-    [SerializeField] float mana;
-    [SerializeField] float manaDrainSpeed;
-    [SerializeField] float manaGain;
-    public bool halfMana;
+    private Coroutine recharge;
     [Space(5)]
 
     [Header("Spell Settings")]
     //spell stats
-    [SerializeField] float manaSpellCost = 0.3f;
+    [SerializeField] float spellCost = 0.3f;
     [SerializeField] float timeBetweenCast = 0.5f;
     float timeSinceCast;
     [SerializeField] float spellDamage; //upspellexplosion and downspellfireball
@@ -115,6 +119,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject upSpellExplosion;
     [SerializeField] GameObject downSpellFireball;
     float castTimer;
+    [Space(5)]
+
+    [Header("Parry Settings")]
+    [SerializeField] private float parryWindow = 0.2f; // Janela de tempo para o parry
+    private float parryTimer; // Temporizador para o parry
+    [SerializeField] private LayerMask enemyLayer; // Camada do inimigo para detecção de colisão
+    [SerializeField] private LayerMask obstacleLayer; // Camada do obstáculo para detecção de colisão
     [Space(5)]
 
 
@@ -163,8 +174,7 @@ public class PlayerController : MonoBehaviour
         gravity = rb.gravityScale;
 
         Health = maxHealth;
-        Mana = mana;
-        manaStorage.fillAmount = Mana;
+
     }
 
     private void OnDrawGizmos()
@@ -178,6 +188,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ParryInput(); // Verifica o input para parry
         if (pState.cutscene) return;
 
         if (pState.alive)
@@ -202,6 +213,29 @@ public class PlayerController : MonoBehaviour
         }
        
         FlashWhileInvincible();
+
+        if (Stamina < MaxStamina)
+        {
+            StartCoroutine(RechargeStamina());
+
+            if (recharge != null) StopCoroutine(recharge);
+            recharge = StartCoroutine(RechargeStamina());
+        }
+        
+
+    }
+
+    void ParryInput()
+    {
+        // Se o jogador pressionar o botão de parry
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            // Inicia o temporizador de parry
+            parryTimer = parryWindow;
+        }
+
+        // Reduz o temporizador de parry ao longo do tempo
+        parryTimer -= Time.deltaTime;
     }
 
     private void OnTriggerEnter2D(Collider2D _other) //for up and down cast spell
@@ -282,6 +316,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Dash") && canDash && !dashed)
         {
             StartCoroutine(Dash());
+           
             dashed = true;
         }
 
@@ -289,6 +324,8 @@ public class PlayerController : MonoBehaviour
         {
             dashed = false;
         }
+
+       
     }
 
     IEnumerator Dash()
@@ -298,7 +335,10 @@ public class PlayerController : MonoBehaviour
         anim.SetTrigger("Dashing");
         rb.gravityScale = 0;
         int _dir = pState.lookingRight ? 1 : -1;
-        rb.velocity = new Vector2(_dir * dashSpeed, 0);
+        rb.velocity = new Vector2(_dir * dashSpeed, 0); 
+        Stamina -= dashCost;
+        if (Stamina < 0) Stamina = 0;
+        StaminaBar.fillAmount = Stamina / MaxStamina;
         yield return new WaitForSeconds(dashTime);
         rb.gravityScale = gravity;
         pState.dashing = false;
@@ -331,6 +371,12 @@ public class PlayerController : MonoBehaviour
 
     void Attack()
     {
+        if (Input.GetButtonDown("Attack"))
+        {
+            Stamina -= attackCost;
+            if (Stamina < 0) Stamina = 0;
+            StaminaBar.fillAmount = Stamina / MaxStamina;
+        }
         timeSinceAttack += Time.deltaTime;
         if (attack && timeSinceAttack >= timeBetweenAttack)
         {
@@ -354,8 +400,46 @@ public class PlayerController : MonoBehaviour
                 
             }
         }
+        // Verifica se o jogador atacou no momento certo para realizar um parry
+        if (attack && timeSinceAttack >= timeBetweenAttack)
+        {
+            timeSinceAttack = 0;
+            anim.SetTrigger("Attacking");
+
+            // Verifica se houve parry bem-sucedido
+            if (CheckParrySuccess())
+            {
+                // Lógica para parry bem-sucedido
+                Debug.Log("Parry bem-sucedido!");
+            }
+        }
 
 
+    }
+
+    bool CheckParrySuccess()
+    {
+        // Realiza um raio na direção do ataque para detectar colisões com inimigos
+        RaycastHit2D hitEnemy = Physics2D.Raycast(SideAttackTransform.position, Vector2.right, SideAttackArea.x, enemyLayer);
+
+        // Realiza um raio na direção do ataque para detectar colisões com obstáculos
+        RaycastHit2D hitObstacle = Physics2D.Raycast(SideAttackTransform.position, Vector2.right, SideAttackArea.x, obstacleLayer);
+
+        // Se o raio atingir um inimigo e o temporizador de parry estiver ativo, retorna verdadeiro
+        if (hitEnemy.collider != null && parryTimer > 0)
+        {
+            return true;
+        }
+
+        // Se o raio atingir um obstáculo e o temporizador de parry estiver ativo, retorna verdadeiro
+        if (hitObstacle.collider != null && parryTimer > 0)
+        {
+            // Lógica para se proteger de espinhos
+            Debug.Log("Parry usado para se proteger de espinhos!");
+            return true;
+        }
+
+        return false;
     }
     void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilBool, Vector2 _recoilDir, float _recoilStrength)
     {
@@ -373,10 +457,7 @@ public class PlayerController : MonoBehaviour
             {
                 objectsToHit[i].GetComponent<Enemy>().EnemyGetsHit (damage, _recoilDir, _recoilStrength);
 
-                if (objectsToHit[i].CompareTag("Enemy"))
-                {
-                    Mana += manaGain;
-                }
+               
             }
         }
     }
@@ -540,19 +621,13 @@ public class PlayerController : MonoBehaviour
         if (!pState.alive)
         {
             pState.alive = true;
-            halfMana = true;
-            UIManager.Instance.SwitchMana(UIManager.ManaState.HalfMana);
-            Mana = 0;
+            
             Health = maxHealth;
             anim.Play("Player_Idle");
         }
     }
 
-    public void RestoreMana()
-    {
-        halfMana = false;
-        UIManager.Instance.SwitchMana(UIManager.ManaState.FullMana);      
-    }
+   
 
     IEnumerator StartTimeAgain(float _delay)
     {
@@ -577,7 +652,7 @@ public class PlayerController : MonoBehaviour
     }
     void Heal()
     {
-        if (Input.GetButton("Heal") && healTimer > 0.05f && Health < maxHealth && Mana > 0 && Grounded() && !pState.dashing)
+        if (Input.GetButton("Heal") && healTimer > 0.05f && Health < maxHealth && Stamina > 0 && Grounded() && !pState.dashing)
         {
             pState.healing = true;
             anim.SetBool("Healing", true);
@@ -591,7 +666,7 @@ public class PlayerController : MonoBehaviour
             }
 
             //drain mana
-            Mana -= Time.deltaTime * manaDrainSpeed;
+            Stamina -= Time.deltaTime;
         }
         else
         {
@@ -600,30 +675,11 @@ public class PlayerController : MonoBehaviour
             healTimer = 0;
         }
     }
-    public float Mana
-    {
-        get { return mana; }
-        set
-        {
-            //if mana stats change
-            if (mana != value)
-            {
-                if (!halfMana)
-                {
-                    mana = Mathf.Clamp(value, 0, 1);
-                }
-                else
-                {
-                    mana = Mathf.Clamp(value, 0, 0.5f);
-                }
-                manaStorage.fillAmount = Mana;
-            }
-        }
-    }
+   
 
     void CastSpell()
     {
-        if (Input.GetButtonUp("Cast") && castTimer <= 0.05f && timeSinceCast >= timeBetweenCast && Mana >= manaSpellCost)
+        if (Input.GetButtonUp("Cast") && castTimer <= 0.05f && timeSinceCast >= timeBetweenCast && Stamina >= spellCost)
         {
             pState.casting = true;
             timeSinceCast = 0;
@@ -644,12 +700,16 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity += downSpellForce * Vector2.down;
         }
+
+        
     }
     IEnumerator CastCoroutine()
     {
         anim.SetBool("Casting", true);
         yield return new WaitForSeconds(0.15f);
-
+        Stamina -= spellCost;
+        if (Stamina < 0) Stamina = 0;
+        StaminaBar.fillAmount = Stamina / MaxStamina;
         //side cast
         if (yAxis == 0 || (yAxis < 0 && Grounded()))
         {
@@ -681,7 +741,7 @@ public class PlayerController : MonoBehaviour
             downSpellFireball.SetActive(true);
         }
 
-        Mana -= manaSpellCost;
+        Stamina -= spellCost;
         yield return new WaitForSeconds(0.35f);
         anim.SetBool("Casting", false);
         pState.casting = false;
@@ -749,6 +809,19 @@ public class PlayerController : MonoBehaviour
         else
         {
             jumpBufferCounter--;
+        }
+    }
+
+    IEnumerator RechargeStamina()
+    {
+        yield return new WaitForSeconds(1f);
+
+        while (Stamina < MaxStamina)
+        {
+            Stamina += chargeRate / 10f;
+            if (Stamina > MaxStamina) Stamina = MaxStamina;
+            StaminaBar.fillAmount = Stamina / MaxStamina;
+            yield return new WaitForSeconds(.1f);
         }
     }
 }
