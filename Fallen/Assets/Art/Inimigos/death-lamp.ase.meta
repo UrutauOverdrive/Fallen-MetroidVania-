@@ -1,0 +1,615 @@
+fileFormatVersion: 2
+guid: 473f86cdda00f904b858019e49388e53
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: death-lamp_Frame_0
+    originalName: 
+    pivot: {x: 0.5714286, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 237
+      width: 14
+      height: 3
+    spriteID: 39e2a67328594f74783cf5f98da6c5ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 237}
+  - name: death-lamp_Frame_1
+    originalName: 
+    pivot: {x: 0.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 225
+      width: 15
+      height: 4
+    spriteID: a0cb2eb94b1fd0f4b8d0c99bd0c54c8b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 225}
+  - name: death-lamp_Frame_2
+    originalName: 
+    pivot: {x: 0.6111111, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 40
+      width: 18
+      height: 30
+    spriteID: c28d66a4f916b4d4db9a2d6cb9040a15
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 40}
+  - name: death-lamp_Frame_3
+    originalName: 
+    pivot: {x: 0.61904764, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 141
+      width: 21
+      height: 18
+    spriteID: a33b206735a6cd94caf5575b725718ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 141}
+  - name: death-lamp_Frame_4
+    originalName: 
+    pivot: {x: 0.6, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 167
+      width: 15
+      height: 16
+    spriteID: 2744708cfda543b49835f458e7ca63bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 167}
+  - name: death-lamp_Frame_5
+    originalName: 
+    pivot: {x: 0.5625, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 191
+      width: 16
+      height: 10
+    spriteID: be1b53db3cb495a41b16663691a56366
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 191}
+  - name: death-lamp_Frame_6
+    originalName: 
+    pivot: {x: 0.65000004, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 209
+      width: 20
+      height: 8
+    spriteID: ed19c364b579d26428c3c61ca37866fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 209}
+  - name: death-lamp_Frame_7
+    originalName: 
+    pivot: {x: 0.6315789, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 238
+      width: 19
+      height: 12
+    spriteID: 9c0ef4acd2093ba488a07e17c2f5aa23
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 238}
+  - name: death-lamp_Frame_8
+    originalName: 
+    pivot: {x: 0.65000004, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 113
+      width: 20
+      height: 20
+    spriteID: 791f48c6389c412469aea0810964929c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 113}
+  - name: death-lamp_Frame_9
+    originalName: 
+    pivot: {x: 0.6666667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 78
+      width: 18
+      height: 27
+    spriteID: 88984c5de09a9fa40b7510ff02b0e6cf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 78}
+  - name: death-lamp_Frame_10
+    originalName: 
+    pivot: {x: 0.47619048, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 39
+      y: 4
+      width: 21
+      height: 28
+    spriteID: 43770082603b3b744af6df73a8d036e0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 39, y: 4}
+  - name: death-lamp_Frame_11
+    originalName: 
+    pivot: {x: 0.5416667, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 42
+      width: 24
+      height: 30
+    spriteID: ed64a3340a8766249aefe950a01b081e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 42}
+  - name: death-lamp_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 80
+      width: 22
+      height: 31
+    spriteID: 77992d1bf56522f4c8e15ce452c8cd01
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 80}
+  - name: death-lamp_Frame_13
+    originalName: 
+    pivot: {x: 0.45000002, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 158
+      width: 20
+      height: 32
+    spriteID: e8f0dc5a943c8864f997ce3dd1d2e2fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 158}
+  - name: death-lamp_Frame_14
+    originalName: 
+    pivot: {x: 0.4814815, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 27
+      height: 30
+    spriteID: 37f57aef4e11c0b4da188380acdec8ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: death-lamp_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 119
+      width: 22
+      height: 31
+    spriteID: d4c4c08682ce4a542942778c4272c69a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 119}
+  - name: death-lamp_Frame_16
+    originalName: 
+    pivot: {x: 0.45000002, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 198
+      width: 20
+      height: 32
+    spriteID: 0ceb2a0e6657e5541b7f53b4b7eff54f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 198}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 328856829
+    name: death-lamp
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: death-lamp_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 8
+        y: 0
+        width: 14
+        height: 3
+      spriteId: 39e2a67328594f74783cf5f98da6c5ad
+    - name: death-lamp_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 7
+        y: 0
+        width: 15
+        height: 4
+      spriteId: a0cb2eb94b1fd0f4b8d0c99bd0c54c8b
+    - name: death-lamp_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 5
+        y: 0
+        width: 18
+        height: 30
+      spriteId: c28d66a4f916b4d4db9a2d6cb9040a15
+    - name: death-lamp_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 3
+        y: 0
+        width: 21
+        height: 18
+      spriteId: a33b206735a6cd94caf5575b725718ea
+    - name: death-lamp_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 7
+        y: 0
+        width: 15
+        height: 16
+      spriteId: 2744708cfda543b49835f458e7ca63bb
+    - name: death-lamp_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 7
+        y: 0
+        width: 16
+        height: 10
+      spriteId: be1b53db3cb495a41b16663691a56366
+    - name: death-lamp_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 3
+        y: 0
+        width: 20
+        height: 8
+      spriteId: ed19c364b579d26428c3c61ca37866fd
+    - name: death-lamp_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 4
+        y: 0
+        width: 19
+        height: 12
+      spriteId: 9c0ef4acd2093ba488a07e17c2f5aa23
+    - name: death-lamp_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 3
+        y: 0
+        width: 20
+        height: 20
+      spriteId: 791f48c6389c412469aea0810964929c
+    - name: death-lamp_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 4
+        y: 0
+        width: 18
+        height: 27
+      spriteId: 88984c5de09a9fa40b7510ff02b0e6cf
+    - name: death-lamp_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 6
+        y: 0
+        width: 21
+        height: 28
+      spriteId: 43770082603b3b744af6df73a8d036e0
+    - name: death-lamp_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 3
+        y: 0
+        width: 24
+        height: 30
+      spriteId: ed64a3340a8766249aefe950a01b081e
+    - name: death-lamp_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 5
+        y: 0
+        width: 22
+        height: 31
+      spriteId: 77992d1bf56522f4c8e15ce452c8cd01
+    - name: death-lamp_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 7
+        y: 0
+        width: 20
+        height: 32
+      spriteId: e8f0dc5a943c8864f997ce3dd1d2e2fb
+    - name: death-lamp_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 3
+        y: 0
+        width: 27
+        height: 30
+      spriteId: 37f57aef4e11c0b4da188380acdec8ce
+    - name: death-lamp_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 5
+        y: 0
+        width: 22
+        height: 31
+      spriteId: d4c4c08682ce4a542942778c4272c69a
+    - name: death-lamp_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 7
+        y: 0
+        width: 20
+        height: 32
+      spriteId: 0ceb2a0e6657e5541b7f53b4b7eff54f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 48}
