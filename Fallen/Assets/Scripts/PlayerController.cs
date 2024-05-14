@@ -104,6 +104,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float dashCost;
     [SerializeField] public float chargeRate;
 
+    private float rechargeTime;
     private Coroutine recharge;
     [Space(5)]
 
@@ -367,14 +368,30 @@ public class PlayerController : MonoBehaviour
         pState.cutscene = false;
     }
 
+    [SerializeField] private GameObject slashEffectPrefab;
     void Attack()
     {
         if (Input.GetButtonDown("Attack"))
         {
+            // Verifica se o jogador pode atacar (Stamina > 0) e se o tempo entre os ataques foi atingido
+            if (Stamina > 0 && timeSinceAttack >= timeBetweenAttack)
+            {
+                // Reinicia o tempo de recarga da Stamina
+                rechargeTime = 10f;
+
+                // Outro código do método Attack() ...
+
+                // Incrementa o tempo desde o último ataque
+                timeSinceAttack = 0.7f;
+
+                // Outro código do método Attack() ...
+            }
+
             Stamina -= attackCost;
             if (Stamina < 0) Stamina = 0;
             StaminaBar.fillAmount = Stamina / MaxStamina;
         }
+
         timeSinceAttack += Time.deltaTime;
         if (attack && timeSinceAttack >= timeBetweenAttack)
         {
@@ -385,19 +402,41 @@ public class PlayerController : MonoBehaviour
             {
                 int _recoilLeftOrRight = pState.lookingRight ? 1 : -1;
                 Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, Vector2.right * _recoilLeftOrRight,recoilXSpeed);
-                
+                InstantiateSlashEffect(SideAttackTransform.position, pState.lookingRight); // Instanciar SlashEffect
             }
             else if (yAxis > 0)
             {
                 Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, Vector2.up,recoilYSpeed);
-                
+                InstantiateSlashEffect(UpAttackTransform.position, true); // Instanciar SlashEffect
+                if (CheckParrySuccess())
+                {
+                    InstantiateSlashEffect(UpAttackTransform.position, true); // Instanciar SlashEffect
+                }
             }
             else if (yAxis < 0 && !Grounded())
             {
                 Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingY, Vector2.down, recoilYSpeed);
-                
+                InstantiateSlashEffect(DownAttackTransform.position, true); // Instanciar SlashEffect
+                if (CheckParrySuccess())
+                {
+                    InstantiateSlashEffect(DownAttackTransform.position, true); // Instanciar SlashEffect
+                }
             }
         }
+
+        void InstantiateSlashEffect(Vector3 position, bool isFacingRight)
+        {
+            GameObject slashEffect = Instantiate(slashEffectPrefab, position, Quaternion.identity);
+            if (!isFacingRight)
+            {
+                // Se o jogador não estiver olhando para a direita, inverte a escala do SlashEffect
+                slashEffect.transform.localScale = new Vector3(-1, 1, 1);
+            }
+            // Sincronizar a animação do SlashEffect com a animação de ataque do jogador
+            // Exemplo: Se a animação de ataque do jogador for chamada "AttackAnimation", você pode fazer algo como:
+            // slashEffect.GetComponent<Animator>().Play("AttackAnimation");
+        }
+
         // Verifica se o jogador atacou no momento certo para realizar um parry
         if (attack && timeSinceAttack >= timeBetweenAttack)
         {
@@ -415,25 +454,60 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    void InstantiateSlashEffect(Vector2 position, bool lookingRight, bool isUpward)
+    {
+        GameObject slashEffectInstance = Instantiate(slashEffectPrefab, position, Quaternion.identity);
+
+        // Ajuste a escala do efeito conforme a direção do jogador
+        if (!lookingRight)
+        {
+            slashEffectInstance.transform.localScale = new Vector3(-1f, 1f, 1f);
+        }
+
+        // Verifique se o ataque é para cima ou para baixo e rotacione conforme necessário
+        if (isUpward)
+        {
+            // Rotacione o eixo Z para cima (sentido anti-horário)
+            slashEffectInstance.transform.Rotate(0f, 0f, 90f);
+        }
+        else
+        {
+            // Rotacione o eixo Z para baixo (sentido horário)
+            slashEffectInstance.transform.Rotate(0f, 0f, -90f);
+        }
+
+        // Aqui você pode adicionar qualquer lógica adicional para sincronizar o efeito com a animação ou o ataque
+    }
+
     bool CheckParrySuccess()
     {
-        // Realiza um raio na direção do ataque para detectar colisões com inimigos
-        RaycastHit2D hitEnemy = Physics2D.Raycast(SideAttackTransform.position, Vector2.right, SideAttackArea.x, enemyLayer);
+        RaycastHit2D hitEnemy;
+        RaycastHit2D hitObstacle;
 
-        // Realiza um raio na direção do ataque para detectar colisões com obstáculos
-        RaycastHit2D hitObstacle = Physics2D.Raycast(SideAttackTransform.position, Vector2.right, SideAttackArea.x, obstacleLayer);
+        if (yAxis > 0)
+        {
+            hitEnemy = Physics2D.Raycast(UpAttackTransform.position, Vector2.up, UpAttackArea.y, enemyLayer);
+            hitObstacle = Physics2D.Raycast(UpAttackTransform.position, Vector2.up, UpAttackArea.y, obstacleLayer);
+        }
+        else if (yAxis < 0)
+        {
+            hitEnemy = Physics2D.Raycast(DownAttackTransform.position, Vector2.down, DownAttackArea.y, enemyLayer);
+            hitObstacle = Physics2D.Raycast(DownAttackTransform.position, Vector2.down, DownAttackArea.y, obstacleLayer);
+        }
+        else
+        {
+            hitEnemy = Physics2D.Raycast(SideAttackTransform.position, Vector2.right, SideAttackArea.x, enemyLayer);
+            hitObstacle = Physics2D.Raycast(SideAttackTransform.position, Vector2.right, SideAttackArea.x, obstacleLayer);
+        }
 
-        // Se o raio atingir um inimigo e o temporizador de parry estiver ativo, retorna verdadeiro
         if (hitEnemy.collider != null && parryTimer > 0)
         {
             return true;
         }
 
-        // Se o raio atingir um obstáculo e o temporizador de parry estiver ativo, retorna verdadeiro
         if (hitObstacle.collider != null && parryTimer > 0)
         {
-            // Lógica para se proteger de espinhos
-            Debug.Log("Parry usado para se proteger de espinhos!");
+            InstantiateSlashEffect(hitObstacle.point, true, false); // SlashEffect como objeto de parry
             return true;
         }
 
@@ -797,10 +871,24 @@ public class PlayerController : MonoBehaviour
 
         while (Stamina < MaxStamina)
         {
-            Stamina += chargeRate / 10f;
-            if (Stamina > MaxStamina) Stamina = MaxStamina;
-            StaminaBar.fillAmount = Stamina / MaxStamina;
-            yield return new WaitForSeconds(.1f);
+            // Verifica se a Stamina não está zerada antes de recarregar
+            if (Stamina > 0)
+            {
+                // Reinicia o tempo de recarga da Stamina quando o jogador ataca
+                if (rechargeTime >= 0f)
+                {
+                    rechargeTime = 0f;
+                }
+
+                Stamina += chargeRate / 10f;
+                if (Stamina > MaxStamina) Stamina = MaxStamina;
+                StaminaBar.fillAmount = Stamina / MaxStamina;
+
+                // Incrementa o tempo de recarga da Stamina
+                rechargeTime += 0.1f;
+            }
+
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }

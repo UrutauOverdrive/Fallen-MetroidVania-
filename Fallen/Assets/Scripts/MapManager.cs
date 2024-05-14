@@ -5,37 +5,23 @@ using UnityEngine.UI;
 
 public class MapManager : MonoBehaviour
 {
-    [SerializeField] GameObject[] maps;
+    public List<GameObject> mapPrefabs;
+    public List<GameObject> availableMaps;
 
-    Bench bench;
-
-    [System.Obsolete]
-    private void OnEnable()
+    void Start()
     {
-        bench = FindObjectOfType<Bench>();
-        if (bench != null)
-        {
-            if (bench.interacted)
-            {
-                UpdateMap();
-            }
-        }
+        availableMaps = new List<GameObject>(mapPrefabs);
+        ShuffleMaps();
     }
 
-    void UpdateMap()
+    void ShuffleMaps()
     {
-        var savedScenes = SaveData.Instance.sceneNames;
-
-        for (int i = 0; i < maps.Length; i++)
+        for (int i = 0; i < availableMaps.Count; i++)
         {
-            if (savedScenes.Contains("Cave_" + (i + 1)))
-            {
-                maps[i].SetActive(true);
-            }
-            else
-            {
-                maps[i].SetActive(false);
-            }
+            int randomIndex = Random.Range(i, availableMaps.Count);
+            GameObject temp = availableMaps[randomIndex];
+            availableMaps[randomIndex] = availableMaps[i];
+            availableMaps[i] = temp;
         }
     }
 }
