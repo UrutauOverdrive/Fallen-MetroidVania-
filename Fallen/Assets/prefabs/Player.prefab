@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3052336568019949325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.53, y: -0.15, z: 0}
+  m_LocalPosition: {x: 0.62, y: -0.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 2864426573622535360}
   - component: {fileID: 4232523520181770699}
   - component: {fileID: 6911226971213045897}
+  - component: {fileID: 7964473605773247653}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -165,7 +166,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.15625, y: 1.375}
+    oldSize: {x: 4.3125, y: 2.75}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -227,37 +228,47 @@ MonoBehaviour:
   dashTime: 0.2
   dashCooldown: 0.35
   SideAttackTransform: {fileID: 6913603788556564047}
-  SideAttackArea: {x: 1, y: 1}
+  SideAttackArea: {x: 1, y: 2}
   UpAttackTransform: {fileID: 5787667243080089594}
-  UpAttackArea: {x: 1, y: 1}
+  UpAttackArea: {x: 2, y: 1}
   DownAttackTransform: {fileID: 8467973940980118538}
-  DownAttackArea: {x: 1, y: 1}
+  DownAttackArea: {x: 2, y: 1}
   attackableLayer:
     serializedVersion: 2
     m_Bits: 64
-  timeBetweenAttack: 0
+  timeBetweenAttack: 0.5
   damage: 10
-  recoilXSteps: 5
-  recoilYSteps: 5
-  recoilXSpeed: 100
-  recoilYSpeed: 32
+  recoilXSteps: 1
+  recoilYSteps: 1
+  recoilXSpeed: 20
+  recoilYSpeed: 10
   health: 5
   maxHealth: 5
   bloodSpurt: {fileID: 5286861553776355784, guid: 83ed765bc7803cd4b94324dbd348b00d, type: 3}
   hitFlashSpeed: 10
   timeToHeal: 1
-  manaStorage: {fileID: 0}
-  mana: 1
-  manaDrainSpeed: 0.2
-  manaGain: 0.01
-  manaSpellCost: 0.3
+  StaminaBar: {fileID: 0}
+  Stamina: 50
+  MaxStamina: 50
+  attackCost: 5
+  dashCost: 5
+  chargeRate: 33
+  spellCost: 0.3
   timeBetweenCast: 0.5
   spellDamage: 10000
   downSpellForce: 2
   sideSpellFireball: {fileID: 6704207778926196201, guid: 947f6bf225f5a704988270b22f6859ba, type: 3}
   upSpellExplosion: {fileID: 6385907138284827304, guid: 2e596e9390ec48949af4b1c3f30ada6c, type: 3}
   downSpellFireball: {fileID: 8216516184631694408}
+  parryWindow: 0.2
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 128
   pState: {fileID: 0}
+  rb: {fileID: 211010990129342802}
 --- !u!95 &4232523520181770699
 Animator:
   serializedVersion: 7
@@ -296,11 +307,25 @@ MonoBehaviour:
   dashing: 0
   recoilingX: 0
   recoilingY: 0
-  lookingRight: 0
+  lookingRight: 1
   invincible: 0
   healing: 0
   casting: 0
   cutscene: 0
+  alive: 1
+--- !u!114 &7964473605773247653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302614523919537933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5df72986b9e6640a8d1d4a91ca5f2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodSpurt: {fileID: 5286861553776355784, guid: 83ed765bc7803cd4b94324dbd348b00d, type: 3}
 --- !u!1 &4917050211506606952
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +351,7 @@ Transform:
   m_GameObject: {fileID: 4917050211506606952}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.88, z: 0}
+  m_LocalPosition: {x: 0, y: 1.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -357,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 6310953127167069415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.17, z: 0}
+  m_LocalPosition: {x: 0, y: -1.79, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -544,7 +569,7 @@ Transform:
   m_GameObject: {fileID: 8695567834634135488}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.323, z: 0}
+  m_LocalPosition: {x: -0.24, y: -1.323, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

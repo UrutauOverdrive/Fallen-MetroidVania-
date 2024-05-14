@@ -113,11 +113,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float timeBetweenCast = 0.5f;
     float timeSinceCast;
     [SerializeField] float spellDamage; //upspellexplosion and downspellfireball
-    [SerializeField] float downSpellForce; // desolate dive only
     //spell cast objects
     [SerializeField] GameObject sideSpellFireball;
     [SerializeField] GameObject upSpellExplosion;
-    [SerializeField] GameObject downSpellFireball;
     float castTimer;
     [Space(5)]
 
@@ -689,19 +687,6 @@ public class PlayerController : MonoBehaviour
         {
             timeSinceCast += Time.deltaTime;
         }
-
-        if (Grounded())
-        {
-            //disable downspell if on the ground
-            downSpellFireball.SetActive(false);
-        }
-        //if down spell is active, force player down until grounded
-        if (downSpellFireball.activeInHierarchy)
-        {
-            rb.velocity += downSpellForce * Vector2.down;
-        }
-
-        
     }
     IEnumerator CastCoroutine()
     {
@@ -733,12 +718,6 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(upSpellExplosion, transform);
             rb.velocity = Vector2.zero;
-        }
-
-        //down cast
-        else if (yAxis < 0 && !Grounded())
-        {
-            downSpellFireball.SetActive(true);
         }
 
         Stamina -= spellCost;
