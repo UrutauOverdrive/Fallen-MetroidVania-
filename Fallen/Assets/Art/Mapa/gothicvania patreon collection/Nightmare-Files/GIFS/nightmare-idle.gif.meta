@@ -154,7 +154,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nightmare-idle_0: 5554387937732185163
+      nightmare-idle_1: -8649462266827660692
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

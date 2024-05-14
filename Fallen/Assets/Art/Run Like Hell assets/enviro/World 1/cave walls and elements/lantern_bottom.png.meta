@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lantern_bottom_0: 8602999280317567570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

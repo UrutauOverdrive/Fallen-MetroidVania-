@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gothic-horror_0: -8193503562433696771
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

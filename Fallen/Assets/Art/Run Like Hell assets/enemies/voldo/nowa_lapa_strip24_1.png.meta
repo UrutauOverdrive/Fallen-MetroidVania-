@@ -178,7 +178,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nowa_lapa_strip24_1_0: 3120804136580120154
+      nowa_lapa_strip24_1_1: 7013867016439984269
+      nowa_lapa_strip24_1_2: 2853136299803145794
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

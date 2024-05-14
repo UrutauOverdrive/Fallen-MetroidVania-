@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kapelusz_1_0: -2758277251175417123
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

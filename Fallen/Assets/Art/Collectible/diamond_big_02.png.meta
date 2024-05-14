@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      diamond_big_02_0: -8123810121608928408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hell-hound-walk_0: 2388793732434983935
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

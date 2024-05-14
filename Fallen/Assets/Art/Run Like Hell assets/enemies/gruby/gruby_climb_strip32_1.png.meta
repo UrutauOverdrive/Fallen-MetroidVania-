@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gruby_climb_strip32_1_0: -536511959183747007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -418,7 +418,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gholum_walk_strip13_0: 7096877813117603534
+      gholum_walk_strip13_1: -5023738424075851488
+      gholum_walk_strip13_10: -459341938744593775
+      gholum_walk_strip13_11: -2594811243463936909
+      gholum_walk_strip13_12: -8026020347091039152
+      gholum_walk_strip13_2: -6614075125085597779
+      gholum_walk_strip13_3: -2314106959561714208
+      gholum_walk_strip13_4: 925684960065156192
+      gholum_walk_strip13_5: -7706306693550733340
+      gholum_walk_strip13_6: 3227159156612239117
+      gholum_walk_strip13_7: 646527719458075123
+      gholum_walk_strip13_8: 2483954799875801802
+      gholum_walk_strip13_9: 6565195872166384606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

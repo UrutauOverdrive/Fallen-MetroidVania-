@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wolf-runing-cyclex4_0: -5291995106407543258
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

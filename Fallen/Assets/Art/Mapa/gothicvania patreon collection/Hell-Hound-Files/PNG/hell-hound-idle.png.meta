@@ -250,7 +250,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hell-hound-idle_0: 3918838654912281067
+      hell-hound-idle_1: -9187898804056352420
+      hell-hound-idle_2: 3438411678899222357
+      hell-hound-idle_3: -6621959767494626080
+      hell-hound-idle_4: 9079761984826374916
+      hell-hound-idle_5: 8094724407786866986
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

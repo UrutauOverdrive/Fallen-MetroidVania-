@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hell-beast-breath_0: -8473535881398634344
+      hell-beast-breath_1: 3700778223479553246
+      hell-beast-breath_2: -728343487374458041
+      hell-beast-breath_3: 1487279022005020668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

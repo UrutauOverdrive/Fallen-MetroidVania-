@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      turbina_0: 6647626792627844144
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

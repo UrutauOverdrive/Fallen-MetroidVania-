@@ -154,7 +154,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Bringer-of-Death_Death_6_0: 7266299365211966428
+      Bringer-of-Death_Death_6_1: -1279285770815250664
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

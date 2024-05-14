@@ -682,7 +682,31 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cacodaemon Sprite Sheet_0: 6389790121533867865
+      Cacodaemon Sprite Sheet_1: -3852113458823382303
+      Cacodaemon Sprite Sheet_10: 7112838895952259862
+      Cacodaemon Sprite Sheet_11: -6949584599233666273
+      Cacodaemon Sprite Sheet_12: -5138439382098170774
+      Cacodaemon Sprite Sheet_13: -1376189586554993406
+      Cacodaemon Sprite Sheet_14: -8916707295786921608
+      Cacodaemon Sprite Sheet_15: -6242054799334906656
+      Cacodaemon Sprite Sheet_16: -4180759591894971638
+      Cacodaemon Sprite Sheet_17: 2459692808887900460
+      Cacodaemon Sprite Sheet_18: -1874386889993243614
+      Cacodaemon Sprite Sheet_19: -3471362277137582445
+      Cacodaemon Sprite Sheet_2: -7517396926043841675
+      Cacodaemon Sprite Sheet_20: 4296365076730665381
+      Cacodaemon Sprite Sheet_21: -4008731628196936064
+      Cacodaemon Sprite Sheet_22: 7733959977076908501
+      Cacodaemon Sprite Sheet_23: 2866245267187518156
+      Cacodaemon Sprite Sheet_3: -5837719191672891323
+      Cacodaemon Sprite Sheet_4: 3256740997420468133
+      Cacodaemon Sprite Sheet_5: 4402805786130018716
+      Cacodaemon Sprite Sheet_6: -3445638416284038088
+      Cacodaemon Sprite Sheet_7: 7407922803484994528
+      Cacodaemon Sprite Sheet_8: -2092530981859022121
+      Cacodaemon Sprite Sheet_9: 5764096388217608220
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

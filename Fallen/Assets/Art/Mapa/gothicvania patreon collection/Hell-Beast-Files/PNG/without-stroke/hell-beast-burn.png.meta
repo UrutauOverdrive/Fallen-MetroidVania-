@@ -250,7 +250,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hell-beast-burn_0: -964232790378084302
+      hell-beast-burn_1: 5765973809765988032
+      hell-beast-burn_2: 8712601788577614914
+      hell-beast-burn_3: 4440911411872933267
+      hell-beast-burn_4: 2054912461944767655
+      hell-beast-burn_5: -4354754010901925189
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

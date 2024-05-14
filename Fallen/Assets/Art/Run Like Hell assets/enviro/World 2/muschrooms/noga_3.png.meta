@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      noga_3_0: 6396176037930609560
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

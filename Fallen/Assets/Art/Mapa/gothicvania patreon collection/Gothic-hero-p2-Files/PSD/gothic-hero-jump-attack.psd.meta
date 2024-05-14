@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gothic-hero-jump-attack_0: -6113549204660553705
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Eye Beast Death9_0: -8957449634199084816
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

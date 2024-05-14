@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      night-town-background-previewx1_0: 7135657777820978990
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Holy VFX 01 Impact3_0: -6452493364117092732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

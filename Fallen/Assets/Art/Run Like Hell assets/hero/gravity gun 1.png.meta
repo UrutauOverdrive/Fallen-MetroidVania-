@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gravity gun 1_0: -6586756348146109530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      liquid_container_0006_Frame-4_0: 4525909379152179932
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

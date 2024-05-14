@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ghost-shriek_0: 2379501848054709139
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

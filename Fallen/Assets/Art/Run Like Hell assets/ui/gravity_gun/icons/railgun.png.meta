@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      railgun_0: 7122970657381634655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

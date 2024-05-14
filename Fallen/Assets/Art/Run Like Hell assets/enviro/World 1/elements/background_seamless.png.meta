@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      background_seamless_0: 8031320429166531842
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

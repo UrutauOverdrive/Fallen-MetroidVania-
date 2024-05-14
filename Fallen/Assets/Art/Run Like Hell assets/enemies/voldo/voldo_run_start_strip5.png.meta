@@ -226,7 +226,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      voldo_run_start_strip5_0: -3918238491602958775
+      voldo_run_start_strip5_1: 2725642941634047323
+      voldo_run_start_strip5_2: 2700528707085171071
+      voldo_run_start_strip5_3: 3288424048971196581
+      voldo_run_start_strip5_4: 7378929307945578327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

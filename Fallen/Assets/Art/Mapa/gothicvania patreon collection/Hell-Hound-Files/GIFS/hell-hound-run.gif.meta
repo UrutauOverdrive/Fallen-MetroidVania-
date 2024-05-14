@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hell-hound-run_0: -1768709251918162563
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

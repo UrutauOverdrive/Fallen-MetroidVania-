@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gothic-hero-crouch-slash_0001_Layer-2_0: 2089562843968122948
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

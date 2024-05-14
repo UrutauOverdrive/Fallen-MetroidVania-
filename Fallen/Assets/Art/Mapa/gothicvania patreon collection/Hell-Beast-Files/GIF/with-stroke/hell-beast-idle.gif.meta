@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hell-beast-idle_0: -446198063759132195
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

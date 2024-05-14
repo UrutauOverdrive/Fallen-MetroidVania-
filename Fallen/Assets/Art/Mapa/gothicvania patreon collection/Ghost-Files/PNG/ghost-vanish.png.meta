@@ -274,7 +274,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ghost-vanish_0: -1663459301286162585
+      ghost-vanish_1: 3452071338178816257
+      ghost-vanish_2: -6159117982315714490
+      ghost-vanish_3: 1549415279476445921
+      ghost-vanish_4: 3860431286593161498
+      ghost-vanish_5: -2445846010109057700
+      ghost-vanish_6: 3195711470213510980
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

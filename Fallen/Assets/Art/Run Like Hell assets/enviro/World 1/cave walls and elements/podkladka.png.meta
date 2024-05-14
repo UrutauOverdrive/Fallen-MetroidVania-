@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      podkladka_0: -5404920022944127738
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

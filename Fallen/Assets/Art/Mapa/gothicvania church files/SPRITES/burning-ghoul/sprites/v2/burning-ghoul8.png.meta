@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      burning-ghoul8_0: -3886527304582559589
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

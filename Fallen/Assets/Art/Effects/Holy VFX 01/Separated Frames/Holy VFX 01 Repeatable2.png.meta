@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Holy VFX 01 Repeatable2_0: 3475145339243439758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

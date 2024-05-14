@@ -154,7 +154,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      laser_start_strip4_0: 565555255503985412
+      laser_start_strip4_1: 2054465437201810237
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

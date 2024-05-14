@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gholum_run_start_strip4_0: -4919043036008227432
+      gholum_run_start_strip4_1: 182233517962214633
+      gholum_run_start_strip4_2: 8232275407475919815
+      gholum_run_start_strip4_3: 4254977404151808919
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

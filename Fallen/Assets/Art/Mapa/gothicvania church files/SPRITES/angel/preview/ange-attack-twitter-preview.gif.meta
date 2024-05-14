@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ange-attack-twitter-preview_0: 5515405574730001757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

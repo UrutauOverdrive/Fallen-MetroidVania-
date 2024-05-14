@@ -202,7 +202,11 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Projectile Destroyed2_0: 1082630762261829172
+      Projectile Destroyed2_1: 4215430280115016968
+      Projectile Destroyed2_2: 3313645271470190080
+      Projectile Destroyed2_3: 3009269894344248940
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

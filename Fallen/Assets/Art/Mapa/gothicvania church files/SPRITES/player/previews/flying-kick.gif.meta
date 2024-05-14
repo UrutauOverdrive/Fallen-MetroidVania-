@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flying-kick_0: -847255351352340155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

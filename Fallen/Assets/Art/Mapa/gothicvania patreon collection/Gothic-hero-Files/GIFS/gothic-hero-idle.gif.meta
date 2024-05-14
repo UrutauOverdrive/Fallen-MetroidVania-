@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gothic-hero-idle_0: 3702383623512059768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

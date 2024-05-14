@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Skeleton React_0: -1515603127067585740
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

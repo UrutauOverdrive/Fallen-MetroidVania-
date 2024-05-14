@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Eye Beast Attack10_0: -6431036671846151035
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

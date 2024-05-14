@@ -322,7 +322,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Torch Sprite Sheet 32x64_0: 760846658683832962
+      Torch Sprite Sheet 32x64_1: 2543744927541204565
+      Torch Sprite Sheet 32x64_2: -6164938035939238553
+      Torch Sprite Sheet 32x64_3: -3940807590207878163
+      Torch Sprite Sheet 32x64_4: 3283669993858642953
+      Torch Sprite Sheet 32x64_5: 3619981677231073785
+      Torch Sprite Sheet 32x64_6: 7373791609346089328
+      Torch Sprite Sheet 32x64_7: 4920396124008639895
+      Torch Sprite Sheet 32x64_8: -2335697556927840264
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Void Ball Projectile3_0: -2631205840390344708
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

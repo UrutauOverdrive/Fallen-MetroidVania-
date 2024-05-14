@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      angel-attack-2_0: 6699513357752752730
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

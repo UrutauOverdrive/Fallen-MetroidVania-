@@ -346,7 +346,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      minimap_dot_strip10_0: 7637592269054017214
+      minimap_dot_strip10_1: 1527828887001077456
+      minimap_dot_strip10_2: 600758569446218330
+      minimap_dot_strip10_3: 7041491538836489400
+      minimap_dot_strip10_4: 480206304746114648
+      minimap_dot_strip10_5: -7893630800319734316
+      minimap_dot_strip10_6: 4329598918031463218
+      minimap_dot_strip10_7: 8265188592798994129
+      minimap_dot_strip10_8: 434712462798339875
+      minimap_dot_strip10_9: 2439530556424462734
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -226,7 +226,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      voldo_walk_start_strip5_0: -7264776732564585753
+      voldo_walk_start_strip5_1: -5241196260225055633
+      voldo_walk_start_strip5_2: 8381456006132881151
+      voldo_walk_start_strip5_3: 9206229914542578769
+      voldo_walk_start_strip5_4: -2187727969142735444
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

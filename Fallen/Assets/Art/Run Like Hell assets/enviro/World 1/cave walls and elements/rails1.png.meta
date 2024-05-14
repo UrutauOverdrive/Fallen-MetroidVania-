@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rails1_0: -5565866336147838317
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

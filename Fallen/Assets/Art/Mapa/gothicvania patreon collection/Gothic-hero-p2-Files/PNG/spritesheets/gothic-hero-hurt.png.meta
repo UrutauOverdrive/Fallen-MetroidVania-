@@ -178,7 +178,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      gothic-hero-hurt_0: 2190853669689026659
+      gothic-hero-hurt_1: 1851766425038269912
+      gothic-hero-hurt_2: 2672976646833291762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

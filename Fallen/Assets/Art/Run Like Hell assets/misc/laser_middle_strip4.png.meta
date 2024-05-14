@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      laser_middle_strip4_0: -5512335468102953031
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

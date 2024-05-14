@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ledge_grab03_0: 5702522559638646501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

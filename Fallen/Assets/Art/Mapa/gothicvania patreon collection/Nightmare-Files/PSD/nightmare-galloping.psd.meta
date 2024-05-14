@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      nightmare-galloping_0: 4926131633840504183
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

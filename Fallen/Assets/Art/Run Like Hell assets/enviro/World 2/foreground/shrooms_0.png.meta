@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      shrooms_0_0: 7444029274303864926
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      elevator_doors_right_0: -874153408759651397
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

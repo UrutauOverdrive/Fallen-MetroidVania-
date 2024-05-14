@@ -154,7 +154,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      anim_lights_0: -5125239575711281107
+      anim_lights_1: 4120577847202693053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
