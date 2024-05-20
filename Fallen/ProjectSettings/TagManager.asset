@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - Death
   - Obstacle
+  - Boss
   layers:
   - Default
   - TransparentFX

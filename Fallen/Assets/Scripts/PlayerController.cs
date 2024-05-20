@@ -368,8 +368,8 @@ public class PlayerController : MonoBehaviour
         pState.cutscene = false;
     }
 
-    [SerializeField] private GameObject slashEffectPrefab;
-    void Attack()
+    [SerializeField] public GameObject slashEffectPrefab;
+    public void Attack()
     {
         if (Input.GetButtonDown("Attack"))
         {
@@ -454,7 +454,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void InstantiateSlashEffect(Vector2 position, bool lookingRight, bool isUpward)
+    public void InstantiateSlashEffect(Vector2 position, bool lookingRight, bool isUpward)
     {
         GameObject slashEffectInstance = Instantiate(slashEffectPrefab, position, Quaternion.identity);
 
