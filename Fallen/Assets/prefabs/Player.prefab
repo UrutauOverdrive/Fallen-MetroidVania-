@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 3052336568019949325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.62, y: -0.28, z: 0}
+  m_LocalPosition: {x: 2.54, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -162,7 +162,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.23241994, y: -0.13867652}
+  m_Offset: {x: -0.46870422, y: -0.28074503}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -172,7 +172,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.58100814, y: 1.0429242}
+  m_Size: {x: 1.1442566, y: 2.0680132}
   m_EdgeRadius: 0
 --- !u!50 &211010990129342802
 Rigidbody2D:
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 20
-  jumpForce: 45
+  jumpForce: 30
   jumpBufferFrames: 8
   coyoteTime: 0.1
   maxAirJumps: 1
@@ -224,19 +224,19 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  dashSpeed: 70
+  dashSpeed: 40
   dashTime: 0.2
-  dashCooldown: 0.35
+  dashCooldown: 2
   SideAttackTransform: {fileID: 6913603788556564047}
-  SideAttackArea: {x: 1, y: 2}
+  SideAttackArea: {x: 4.8, y: 2}
   UpAttackTransform: {fileID: 5787667243080089594}
-  UpAttackArea: {x: 2, y: 1}
+  UpAttackArea: {x: 2, y: 4.7}
   DownAttackTransform: {fileID: 8467973940980118538}
-  DownAttackArea: {x: 2, y: 1}
+  DownAttackArea: {x: 2, y: 4.7}
   attackableLayer:
     serializedVersion: 2
     m_Bits: 64
-  timeBetweenAttack: 0.5
+  timeBetweenAttack: 0.1
   damage: 10
   recoilXSteps: 1
   recoilYSteps: 1
@@ -252,14 +252,12 @@ MonoBehaviour:
   MaxStamina: 50
   attackCost: 5
   dashCost: 5
-  chargeRate: 33
+  chargeRate: 1
   spellCost: 0.3
   timeBetweenCast: 0.5
   spellDamage: 10000
-  downSpellForce: 2
   sideSpellFireball: {fileID: 6704207778926196201, guid: 947f6bf225f5a704988270b22f6859ba, type: 3}
   upSpellExplosion: {fileID: 6385907138284827304, guid: 2e596e9390ec48949af4b1c3f30ada6c, type: 3}
-  downSpellFireball: {fileID: 8216516184631694408}
   parryWindow: 0.2
   enemyLayer:
     serializedVersion: 2
@@ -269,6 +267,7 @@ MonoBehaviour:
     m_Bits: 128
   pState: {fileID: 0}
   rb: {fileID: 211010990129342802}
+  slashEffectPrefab: {fileID: 8346992924083242581, guid: ec03eebd1d79fef4f83c0dfae0548a34, type: 3}
 --- !u!95 &4232523520181770699
 Animator:
   serializedVersion: 7
@@ -351,7 +350,7 @@ Transform:
   m_GameObject: {fileID: 4917050211506606952}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.24, z: 0}
+  m_LocalPosition: {x: 0, y: 3.08, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -382,7 +381,7 @@ Transform:
   m_GameObject: {fileID: 6310953127167069415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.79, z: 0}
+  m_LocalPosition: {x: 0, y: -3.69, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -569,7 +568,7 @@ Transform:
   m_GameObject: {fileID: 8695567834634135488}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24, y: -1.323, z: 0}
+  m_LocalPosition: {x: -0.1733, y: -1.3125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
