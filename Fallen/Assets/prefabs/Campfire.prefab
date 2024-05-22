@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &763483041933460557
+--- !u!1 &469791922113936739
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2095536013746047335}
-  - component: {fileID: 2950100384777927956}
-  - component: {fileID: 6194197544910395953}
-  - component: {fileID: 7115830903944500496}
+  - component: {fileID: 1842040600239688270}
+  - component: {fileID: 4126290084206378326}
+  - component: {fileID: 3255949392067836777}
+  - component: {fileID: 975905406950931686}
+  - component: {fileID: 6732111355888089643}
   m_Layer: 0
-  m_Name: Bench
+  m_Name: Campfire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2095536013746047335
+--- !u!4 &1842040600239688270
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763483041933460557}
+  m_GameObject: {fileID: 469791922113936739}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3868861, y: 0.3682971, z: 0}
-  m_LocalScale: {x: 0.6446582, y: 0.5642826, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -222.793, y: -15.653, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7632347791065948312}
+  - {fileID: 5061473783264860440}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &2950100384777927956
+--- !u!212 &4126290084206378326
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763483041933460557}
+  m_GameObject: {fileID: 469791922113936739}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -78,24 +79,46 @@ SpriteRenderer:
   m_SortingLayerID: 1387268553
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3664005258963780101, guid: b4def468cf4cffc4cbe0d7b028113ff4, type: 3}
+  m_Sprite: {fileID: -5190526981810414931, guid: 0fb0aae01e4bcfa4cb7c7147243f3f4e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 4, y: 2.22}
+  m_Size: {x: 1, y: 0.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6194197544910395953
+--- !u!95 &3255949392067836777
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469791922113936739}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 000fc439047f99e4398806bbf233f388, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!61 &975905406950931686
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763483041933460557}
+  m_GameObject: {fileID: 469791922113936739}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -123,32 +146,32 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.00000047683716, y: 0.39328963}
+  m_Offset: {x: -0.028694153, y: 0.04906082}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 2.22}
-    newSize: {x: 4, y: 2.22}
+    oldSize: {x: 1, y: 0.5}
+    newSize: {x: 1, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.127945, y: 3.0828376}
+  m_Size: {x: 1.1923065, y: 0.60515976}
   m_EdgeRadius: 0
---- !u!114 &7115830903944500496
+--- !u!114 &6732111355888089643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 763483041933460557}
+  m_GameObject: {fileID: 469791922113936739}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a0edfe94b45e9a489500256a579b3ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respawnPoint: {fileID: 7632347791065948312}
---- !u!1 &2010716354656195584
+  respawnPoint: {fileID: 5061473783264860440}
+--- !u!1 &8191255083581385606
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -156,26 +179,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7632347791065948312}
+  - component: {fileID: 5061473783264860440}
   m_Layer: 0
-  m_Name: Respawn Point
+  m_Name: 'Respawn Point '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7632347791065948312
+--- !u!4 &5061473783264860440
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2010716354656195584}
+  m_GameObject: {fileID: 8191255083581385606}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.7, z: 0}
-  m_LocalScale: {x: 1, y: 1.265625, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.31, y: 0.55, z: 0}
+  m_LocalScale: {x: 0.6446582, y: 0.71417016, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2095536013746047335}
+  m_Father: {fileID: 1842040600239688270}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
