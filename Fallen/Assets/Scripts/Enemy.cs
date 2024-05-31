@@ -42,6 +42,12 @@ public class Enemy : MonoBehaviour
         Shade_Stunned,
         Shade_Death,
 
+        //Boss
+        Boss_Idle,
+        Boss_Attack,
+        Boss_Hurt,
+        Boss_Death,
+
 
     }
     protected EnemyStates currentEnemyState;
