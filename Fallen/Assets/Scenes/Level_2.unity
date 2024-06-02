@@ -1753,6 +1753,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2864426573622535360, guid: ce44cb82c5695404c91455015afa3840, type: 3}
+      propertyPath: StaminaBar
+      value: 
+      objectReference: {fileID: 1465602261}
     - target: {fileID: 4302614523919537933, guid: ce44cb82c5695404c91455015afa3840, type: 3}
       propertyPath: m_Name
       value: Player
@@ -8958,6 +8962,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8879d2ce3570c8647bd7d2efb0d8b7ff, type: 3}
+--- !u!114 &1465602261 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7614377777678531902, guid: 8879d2ce3570c8647bd7d2efb0d8b7ff, type: 3}
+  m_PrefabInstance: {fileID: 1465602260}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1466852180
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14029,6 +14044,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1104467527}
   - {fileID: 1465602260}
+  - {fileID: 214332166}
   - {fileID: 1956852979}
   - {fileID: 479433648}
   - {fileID: 1899596965}
@@ -14037,4 +14053,3 @@ SceneRoots:
   - {fileID: 1221378694}
   - {fileID: 1994045865}
   - {fileID: 1890414827}
-  - {fileID: 214332166}
