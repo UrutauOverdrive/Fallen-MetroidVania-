@@ -6,10 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Cave_1.unity
-    guid: f8dde16ae0cc96d4c9bcaa85e19bd6ec
+    path: Assets/Scenes/Level_1.unity
+    guid: 193630cc2e8960542b0d14c8b405f260
   - enabled: 1
-    path: Assets/Scenes/Cave_2.unity
-    guid: 64604579888ee8343951bdf1dd4ab88d
+    path: Assets/Scenes/Level_2.unity
+    guid: 479fe4f07a1ff044eb47f8061988c22e
+  - enabled: 1
+    path: Assets/Scenes/Boss_Room.unity
+    guid: 58e4050580b7adc4e87cfb63ee864651
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
