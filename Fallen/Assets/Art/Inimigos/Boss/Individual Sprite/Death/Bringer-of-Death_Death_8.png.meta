@@ -112,9 +112,9 @@ TextureImporter:
       name: Bringer-of-Death_Death_8_0
       rect:
         serializedVersion: 2
-        x: 85
+        x: 0
         y: 0
-        width: 55
+        width: 140
         height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

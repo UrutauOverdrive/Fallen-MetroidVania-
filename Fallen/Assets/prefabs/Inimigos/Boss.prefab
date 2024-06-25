@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5508381645993722741}
   - component: {fileID: 3165786790927843686}
   - component: {fileID: 8273106078207453282}
-  - component: {fileID: 7008352981859587067}
   - component: {fileID: 3311293516015520509}
   - component: {fileID: 6755770718295557220}
   m_Layer: 6
@@ -113,31 +112,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7008352981859587067
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 716148273242321194}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a231c4f260b1474468024145f0cdd4d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  recoilLength: 1
-  recoilFactor: 1
-  isRecoiling: 0
-  speed: 1
-  damage: 1
-  orangeBlood: {fileID: 4547539696287067840, guid: 8ecec29efd7194d4ebe6063ce80de1a9, type: 3}
-  rb2D: {fileID: 3311293516015520509}
-  player: {fileID: 0}
-  attackController: {fileID: 149489121042755218}
-  attackRadius: 3
-  attackDamage: 2
-  life: 10
 --- !u!50 &3311293516015520509
 Rigidbody2D:
   serializedVersion: 4

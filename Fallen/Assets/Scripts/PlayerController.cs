@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float timeBetweenAttack;
     private float timeSinceAttack;
 
-    [SerializeField] private float damage; //the damage the player does to an enemy
+    [SerializeField] public float damage; //the damage the player does to an enemy
 
     
 
@@ -120,12 +120,7 @@ public class PlayerController : MonoBehaviour
     float castTimer;
     [Space(5)]
 
-    [Header("Parry Settings")]
-    [SerializeField] private float parryWindow = 0.2f; // Janela de tempo para o parry
-    private float parryTimer; // Temporizador para o parry
-    [SerializeField] private LayerMask enemyLayer; // Camada do inimigo para detecção de colisão
-    [SerializeField] private LayerMask obstacleLayer; // Camada do obstáculo para detecção de colisão
-    [Space(5)]
+    
 
 
     [HideInInspector] public PlayerStateList pState;
@@ -187,7 +182,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ParryInput(); // Verifica o input para parry
+       
         if (pState.cutscene) return;
 
         if (pState.alive)
@@ -224,18 +219,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    void ParryInput()
-    {
-        // Se o jogador pressionar o botão de parry
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            // Inicia o temporizador de parry
-            parryTimer = parryWindow;
-        }
-
-        // Reduz o temporizador de parry ao longo do tempo
-        parryTimer -= Time.deltaTime;
-    }
+   
 
     private void OnTriggerEnter2D(Collider2D _other) //for up and down cast spell
     {
@@ -408,19 +392,13 @@ public class PlayerController : MonoBehaviour
             {
                 Hit(UpAttackTransform, UpAttackArea, ref pState.recoilingY, Vector2.up,recoilYSpeed);
                 InstantiateSlashEffect(UpAttackTransform.position, true); // Instanciar SlashEffect
-                if (CheckParrySuccess())
-                {
-                    InstantiateSlashEffect(UpAttackTransform.position, true); // Instanciar SlashEffect
-                }
+                
             }
             else if (yAxis < 0 && !Grounded())
             {
                 Hit(DownAttackTransform, DownAttackArea, ref pState.recoilingY, Vector2.down, recoilYSpeed);
                 InstantiateSlashEffect(DownAttackTransform.position, true); // Instanciar SlashEffect
-                if (CheckParrySuccess())
-                {
-                    InstantiateSlashEffect(DownAttackTransform.position, true); // Instanciar SlashEffect
-                }
+               
             }
         }
 
@@ -443,12 +421,7 @@ public class PlayerController : MonoBehaviour
             timeSinceAttack = 0;
             anim.SetTrigger("Attacking");
 
-            // Verifica se houve parry bem-sucedido
-            if (CheckParrySuccess())
-            {
-                // Lógica para parry bem-sucedido
-                Debug.Log("Parry bem-sucedido!");
-            }
+            
         }
 
 
@@ -479,40 +452,7 @@ public class PlayerController : MonoBehaviour
         // Aqui você pode adicionar qualquer lógica adicional para sincronizar o efeito com a animação ou o ataque
     }
 
-    bool CheckParrySuccess()
-    {
-        RaycastHit2D hitEnemy;
-        RaycastHit2D hitObstacle;
-
-        if (yAxis > 0)
-        {
-            hitEnemy = Physics2D.Raycast(UpAttackTransform.position, Vector2.up, UpAttackArea.y, enemyLayer);
-            hitObstacle = Physics2D.Raycast(UpAttackTransform.position, Vector2.up, UpAttackArea.y, obstacleLayer);
-        }
-        else if (yAxis < 0)
-        {
-            hitEnemy = Physics2D.Raycast(DownAttackTransform.position, Vector2.down, DownAttackArea.y, enemyLayer);
-            hitObstacle = Physics2D.Raycast(DownAttackTransform.position, Vector2.down, DownAttackArea.y, obstacleLayer);
-        }
-        else
-        {
-            hitEnemy = Physics2D.Raycast(SideAttackTransform.position, Vector2.right, SideAttackArea.x, enemyLayer);
-            hitObstacle = Physics2D.Raycast(SideAttackTransform.position, Vector2.right, SideAttackArea.x, obstacleLayer);
-        }
-
-        if (hitEnemy.collider != null && parryTimer > 0)
-        {
-            return true;
-        }
-
-        if (hitObstacle.collider != null && parryTimer > 0)
-        {
-            InstantiateSlashEffect(hitObstacle.point, true, false); // SlashEffect como objeto de parry
-            return true;
-        }
-
-        return false;
-    }
+    
     void Hit(Transform _attackTransform, Vector2 _attackArea, ref bool _recoilBool, Vector2 _recoilDir, float _recoilStrength)
     {
         Collider2D[] objectsToHit = Physics2D.OverlapBoxAll(_attackTransform.position, _attackArea, 0, attackableLayer);
