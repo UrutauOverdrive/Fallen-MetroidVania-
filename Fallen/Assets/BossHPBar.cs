@@ -4,21 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 public class BossHPBar : MonoBehaviour
 {
-    private Slider Slider;
+    private Slider slider;
 
     private void Start()
     {
-        Slider = GetComponent<Slider>();
+        slider = GetComponent<Slider>();
     }
 
     public void ChangeMaxLife(float maxLife)
     {
-        Slider.value = maxLife;
+        slider.maxValue = maxLife;
     }
 
     public void ChangeCurrentLife(float lifeAmount)
     {
-        Slider.value = lifeAmount;  
+        slider.value = lifeAmount;  
     }
 
     public void BootLifeBar(float lifeAmount)

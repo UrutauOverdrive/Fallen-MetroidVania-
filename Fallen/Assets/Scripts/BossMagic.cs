@@ -20,15 +20,15 @@ public class BossMagic : MonoBehaviour
     public void Strike()
     {
         Collider2D[] objects = Physics2D.OverlapBoxAll(magicPosition.position, magicDimension, 0f);
-        /*
+
         foreach (Collider2D collision in objects)
         {
             if (collision.CompareTag("Player"))
             {
-                collision.GetComponent<PlayerController>().TakeDamage(attackDamage);
+                collision.GetComponent<PlayerController>().TakeDamage(damage);
             }
         }
-        */
+
     }
 
     private void OnDrawGizmos()

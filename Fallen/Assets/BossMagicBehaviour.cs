@@ -2,33 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BossWalkBehaviour : StateMachineBehaviour
+public class BossMagicBehaviour : StateMachineBehaviour
 {
-    private BossController Boss;
-    private Rigidbody2D rb2d;
+    [SerializeField] private GameObject magic;
 
-    [SerializeField] private float moveSpeed;
+    [SerializeField] private float offSetY;
+
+    private BossController Boss;
+
+    private Transform player;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         Boss = animator.GetComponent<BossController>();
-        rb2d = Boss.rb2D;
+        player = Boss.player;
 
         Boss.LookAtPlayer();
+        
+        Vector2 magicPosition = new Vector2(player.position.x, player.position.y + offSetY);
+
+        Instantiate(magic, magicPosition, Quaternion.identity);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        rb2d.velocity = new Vector2(moveSpeed, rb2d.velocity.y) * animator.transform.right;
-    }
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        rb2d.velocity = new Vector2(0, rb2d.velocity.y);
-    }
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

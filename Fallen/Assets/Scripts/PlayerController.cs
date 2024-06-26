@@ -472,7 +472,16 @@ public class PlayerController : MonoBehaviour
                
             }
         }
+        foreach (Collider2D collider in objectsToHit)
+        {
+            if (collider.CompareTag("Boss"))
+            {
+                collider.transform.GetComponent<BossController>().TakeDamage(damage);
+            }
+        }
     }
+
+    
     void Recoil()
     {
         if (pState.recoilingX)

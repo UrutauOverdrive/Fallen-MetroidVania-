@@ -1,22 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static Enemy;
 
 public class BossController : MonoBehaviour
 {
     private Animator animator;
 
     public Rigidbody2D rb2D;
-    
+
     public Transform player;
-    
+
     private bool lookingRight = true;
 
     [Header("Life")]
 
     [SerializeField] private float Life;
-    
+
     [SerializeField] private BossHPBar lifeBar;
 
     [Header("Attack")]
