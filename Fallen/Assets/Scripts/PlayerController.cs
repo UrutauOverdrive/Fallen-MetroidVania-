@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
@@ -28,7 +29,7 @@ public class PlayerController : MonoBehaviour
     private float gravity; //stores the gravity scale at start
     [Space(5)]
 
-
+    public GameObject gameOverUI;
 
     [Header("Ground Check Settings:")]
     [SerializeField] private Transform groundCheckPoint; //point at which ground check happens
@@ -385,7 +386,7 @@ public class PlayerController : MonoBehaviour
             if (yAxis == 0 || yAxis < 0 && Grounded())
             {
                 int _recoilLeftOrRight = pState.lookingRight ? 1 : -1;
-                Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, Vector2.right * _recoilLeftOrRight,recoilXSpeed);
+                Hit(SideAttackTransform, SideAttackArea, ref pState.recoilingX, Vector2.right * _recoilLeftOrRight, recoilXSpeed);
                 InstantiateSlashEffect(SideAttackTransform.position, pState.lookingRight); // Instanciar SlashEffect
             }
             else if (yAxis > 0)
@@ -632,10 +633,20 @@ public class PlayerController : MonoBehaviour
         anim.SetTrigger("Death");
 
         yield return new WaitForSeconds(0.9f);
-        StartCoroutine(UIManager.Instance.ActivateDeathScreen());
+      
 
         yield return new WaitForSeconds(0.9f);
         
+    }
+
+    public void GameOver()
+    {
+        gameOverUI.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
     public void Respawned()
     {

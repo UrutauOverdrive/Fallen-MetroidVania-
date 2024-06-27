@@ -60,8 +60,6 @@ public class UIManager : MonoBehaviour
     public IEnumerator ActivateDeathScreen()
     {
         yield return new WaitForSeconds(0.8f);
-
-        yield return new WaitForSeconds(0.8f);
         deathScreen.SetActive(true);
     }
 
